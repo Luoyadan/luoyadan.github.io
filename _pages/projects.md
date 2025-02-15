@@ -3,7 +3,7 @@ layout: page
 title: Projects
 permalink: /projects/
 description: A growing collection of our group projects.
-nav: true
+nav: false
 nav_order: 3
 display_categories: [Generalization in 3D Detection]
 horizontal: false
