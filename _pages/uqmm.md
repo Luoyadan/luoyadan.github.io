@@ -34,7 +34,7 @@ blockquote {
   <div class="box"><a href="https://www.linkedin.com/in/zi-xin-wang-6307811ab/?originalSubdomain=au" title="Zixin Wang">
           <img src="/assets/img/student_preview/zixin.jpg" alt="Zixin"  class="img-gallery" />
           <div class ="textbox" style="margin-top:10px;"> <b> Zixin Wang </b> </div>
-          <div class ="textbox" style="margin-top:3px;"> Ph.D. <br> 2024.07-Present<br> </div></a>
+          <div class ="textbox" style="margin-top:3px;"> Postdoc <br> 2024.07-Present<br> </div></a>
     </div>
 </div>
 #### PhD Students
@@ -107,13 +107,22 @@ blockquote {
 
 # Lab News
 
+### 2025
+[Feb ' 25] 1 paper accepted by CVPR 2025
+- **[Don't Shake the Wheel: Momentum-Aware Planning in End-to-End Autonomous Driving](https://arxiv.org/pdf/2503.03125)**. **Ziying Song, Caiyan Jia, Lin Liu, Hongyu Pan, Yongchang Zhang, Junming Wang, Xingyu Zhang, Shaoqing Xu, Lei Yang, **Yadan Luo**.* 📝[Paper Link](https://arxiv.org/pdf/2503.03125), 🛠️[Github](https://github.com/adept-thu/MomAD). 
+
+[Feb '25] 2 papers accepted by ICLR 2025
+- **[MOS: Model Synergy for Test-Time Adaptation on LiDAR-Based 3D Object Detection](https://arxiv.org/pdf/2406.14878)**. ***Zhuoxiao Chen**,  Junjie Meng, Mahsa Baktashmotlagh, Zi Huang, **Yadan Luo**.* 📝[Paper Link](https://arxiv.org/pdf/2406.14878), 🛠️[Github](https://github.com/jason-lim26/DiPEx), 🎉Oral Presentation (1.8%). 
+- **[PolaFormer: Polarity-aware Linear Attention for Vision Transformers](https://arxiv.org/pdf/2501.15061)**. *Weikang Meng, **Yadan Luo**, Xin Li, Dongmei Jiang, Zheng Zhang* 📝[Paper Link](https://arxiv.org/pdf/2501.15061), 🛠️[Github](https://github.com/jason-lim26/DiPEx), 🤗[Huggingface](https://huggingface.co/ZachMeng/PolaFormer/tree/main).
+
+
 #### 2024
 [Oct '24] 🥇 The second place in the [Sweet Peppers Multi-Object Tracking Challenge](https://cvppa2024.github.io/challenges/#multi-object-tracking-of-sweet-peppers-challenge00477),  ***Jia Syuen Lim**, **Yadan Luo**, Zhi Chen, Tianqi Wei, Scott Chapman, and Zi Huang*, *Track Any Peppers: Weakly Supervised Sweet Pepper Tracking Using VLMs*, 📝[Paper Link], 🛠️[Github], 9th Workshop on Computer Vision in Plant Phenotyping and Agriculture (CVPPA), held at [ECCV 2024](https://cvppa2024.github.io/).
 
-[Oct '24] 2 papers accepted by NeurIPS 2024
-- **[DiPEx: Dispersing Prompt Expansion for Class-Agnostic Object Detection](https://arxiv.org/pdf/2406.14924)**. ***Jia Syuen Lim**, **Zhuoxiao Chen**, Mahsa Baktashmotlagh, Zhi Chen, Xin Yu, Zi Huang, **Yadan Luo**.* 📝[Paper Link](https://arxiv.org/pdf/2406.14924), 🛠️[Github]
+[Oct '24] 3 papers accepted by NeurIPS 2024
+- **[DiPEx: Dispersing Prompt Expansion for Class-Agnostic Object Detection](https://arxiv.org/pdf/2406.14924)**. ***Jia Syuen Lim**, **Zhuoxiao Chen**, Mahsa Baktashmotlagh, Zhi Chen, Xin Yu, Zi Huang, **Yadan Luo**.* 📝[Paper Link](https://arxiv.org/pdf/2406.14924), 🛠️[Github](https://github.com/jason-lim26/DiPEx)
 
-- **Color-Oriented Redundancy Reduction in Dataset Distillation**. ***Bowen Yuan**, Zijian Wang, Mahsa Baktashmotlagh, **Yadan Luo**, Zi Huang* 📝[Paper Link], 🛠️[Github]
+- **[Color-Oriented Redundancy Reduction in Dataset Distillation](https://proceedings.neurips.cc/paper_files/paper/2024/file/5f5f7b6080dcadced61cf5d96f7c6dde-Paper-Conference.pdf)**. ***Bowen Yuan**, Zijian Wang, Mahsa Baktashmotlagh, **Yadan Luo**, Zi Huang* 📝[Paper Link](https://proceedings.neurips.cc/paper_files/paper/2024/file/5f5f7b6080dcadced61cf5d96f7c6dde-Paper-Conference.pdf), 🛠️[Github](https://github.com/kevinyuan0314/autopalette)
 
 
 [Jul '24] 1 paper accepted by MM 2024

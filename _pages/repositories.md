@@ -126,7 +126,7 @@ nav_order: 3
 </style>
 
 <div id="repo-list" class="card-container">
-  <p>正在加载 forked 仓库...</p>
+  <p>Loading forked UQMM repositorys...</p>
 </div>
 
 <script>
@@ -143,7 +143,7 @@ nav_order: 3
         return;
       }
       if (forkedRepos.length === 0) {
-        repoList.innerHTML = '<p>没有找到 forked 仓库。</p>';
+        repoList.innerHTML = '<p>forked repos not found</p>';
         return;
       }
 
@@ -204,7 +204,7 @@ nav_order: 3
         </a>
       </div>
       <div class="card-body">
-        <p class="card-text">${repoData.description || '暂无描述'}</p>
+        <p class="card-text">${repoData.description || 'no description'}</p>
         <div class="stats">
           <span class="badge badge-primary">Stars: ${stars}</span>
           <span class="badge badge-secondary">Forks: ${forks}</span>
