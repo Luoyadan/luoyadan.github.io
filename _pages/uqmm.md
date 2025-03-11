@@ -109,7 +109,7 @@ blockquote {
 
 ### 2025
 [Feb ' 25] 1 paper accepted by CVPR 2025
-- **[Don't Shake the Wheel: Momentum-Aware Planning in End-to-End Autonomous Driving](https://arxiv.org/pdf/2503.03125)**. **Ziying Song, Caiyan Jia, Lin Liu, Hongyu Pan, Yongchang Zhang, Junming Wang, Xingyu Zhang, Shaoqing Xu, Lei Yang, **Yadan Luo**.* 📝[Paper Link](https://arxiv.org/pdf/2503.03125), 🛠️[Github](https://github.com/adept-thu/MomAD). 
+- **[Don't Shake the Wheel: Momentum-Aware Planning in End-to-End Autonomous Driving](https://arxiv.org/pdf/2503.03125)**. *Ziying Song, Caiyan Jia, Lin Liu, Hongyu Pan, Yongchang Zhang, Junming Wang, Xingyu Zhang, Shaoqing Xu, Lei Yang, **Yadan Luo**.* 📝[Paper Link](https://arxiv.org/pdf/2503.03125), 🛠️[Github](https://github.com/adept-thu/MomAD). 
 
 [Feb '25] 2 papers accepted by ICLR 2025
 - **[MOS: Model Synergy for Test-Time Adaptation on LiDAR-Based 3D Object Detection](https://arxiv.org/pdf/2406.14878)**. ***Zhuoxiao Chen**,  Junjie Meng, Mahsa Baktashmotlagh, Zi Huang, **Yadan Luo**.* 📝[Paper Link](https://arxiv.org/pdf/2406.14878), 🛠️[Github](https://github.com/jason-lim26/DiPEx), 🎉Oral Presentation (1.8%). 
