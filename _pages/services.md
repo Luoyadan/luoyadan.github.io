@@ -22,6 +22,6 @@ nav_order: 6
 - **Shortlist Judge**, 2019 WiT Awards Program, 2019 
 
 ### Internal Service
-- **Plan Convener** for School of EECS, the University of Queensland, 2024.
+- **Plan Convener** for School of EECS, the University of Queensland, 2024-Present.
 - **Academic Advisor** for Pathway Program (Computer Science), the University of Queensland, 2023.
-- **Orgnizer** of [DS Seminar Series](https://uq-ds-seminar.github.io/), 2023.
+- **Organizer** of [DS Seminar Series](https://uq-ds-seminar.github.io/), 2023.
