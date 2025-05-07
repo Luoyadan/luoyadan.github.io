@@ -7,11 +7,12 @@ nav: true
 nav_order: 6
 ---
 ### Editorial Board Member
-- [IEEE Transactions on Circuits and Systems for Video Technology (TCSVT)](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=76) (2024 - )
+- IEEE Transactions on Circuits and Systems for Video Technology (TCSVT) (2024 - )
 
 ### Conference Chair
-- **Area Chair**, CVPR 2025, ICLR 2025, [MM 2024](https://2024.acmmm.org/organisation-committee), MM 2023, AJCAI 2023
-- **Publication Chairs**, [MM 2024](https://2024.acmmm.org/organisation-committee)
+- **Program Chair**, SIGIR-AP'25
+- **Area Chair**, NeurIPS 2025, ICML 2025, CVPR 2025, ICLR 2025, MM 2024, MM 2023, AJCAI 2023
+- **Publication Chairs**, MM 2024
 - **Short Paper and Demo Chair**, ACM Multimedia Asia 2024
 - **Short Paper Chair**, WWW 2025
 - **Doctoral Symposium Chair**, ACM Multimedia Asia 2025
