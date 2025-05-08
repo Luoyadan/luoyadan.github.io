@@ -65,6 +65,7 @@ og_image: # The site-wide (default for all links) Open Graph preview image
 
 github_username: Luoyadan # your GitHub user name
 gitlab_username: # your GitLab user name
+cv_url: /assets/pdf/Yadan_latest_Resume.pdf
 twitter_username: # your Twitter handle
 mastodon_username: # your mastodon instance+username in the format instance.tld/@username
 linkedin_username: yadan-luo-755751132 # your LinkedIn user name

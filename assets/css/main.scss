@@ -22,3 +22,23 @@ $max-content-width: {{ site.max_width }};
   "tabler-icons/tabler-icons-filled.scss",
   "tabler-icons/tabler-icons-outline.scss"
 ;
+.zh-small {
+  font-size: 0.6em;  
+  font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif; 
+}
+
+.social a i {
+  font-size: 1em;
+  background: linear-gradient(135deg, #a18cd1, #fbc2eb); /* 柔紫到粉色 */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: transform 0.3s ease, background-position 0.6s ease;
+  background-size: 100% 100%;
+  background-position: left center;
+  margin: 0 8px;
+}
+
+.social a:hover i {
+  background-position: right center;
+  transform: translateY(-2px) scale(1.15);
+}
