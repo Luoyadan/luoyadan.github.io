@@ -8,31 +8,121 @@ nav_order: 3
 ---
 
 
-<!-- ## GitHub users
 
-{% if site.data.repositories.github_users %}
-<div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
-  {% for user in site.data.repositories.github_users %}
-    {% include repository/repo_user.html username=user %}
-  {% endfor %}
+<div class="gallery-carousel">
+  <!-- Slide 1 -->
+  <div class="gallery-slide active">
+    <video autoplay loop muted playsinline>
+      <source src="/assets/video/scene_262_cam_web.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="caption">
+      <a href="https://djamahl99.github.io/findnpropagatepage/" target="_blank">
+        [ECCV'2024] Find n' Propagate
+      </a>
+      <p>Open-Vocabulary 3D Object Detection in Urban Environments</p>
+    </div>
+  </div>
+
+  <!-- Slide 2 (example, add more like this) -->
+  <div class="gallery-slide">
+    <video autoplay loop muted playsinline>
+      <source src="/assets/video/sample_project.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="caption">
+      <a href="https://github.com/example/project2" target="_blank">Project 2</a>
+      <p>Sample description of the second project with a video preview.</p>
+    </div>
+  </div>
+
+  <!-- Navigation Button -->
+  <button class="next-slide">Next One ➡️</button>
 </div>
-{% endif %}
 
----
+<style>
+  .gallery-carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 2rem;
+  }
 
-## GitHub Repositories
+  .gallery-slide {
+    display: none;
+    width: 100%;
+  }
 
-{% if site.data.repositories.github_repos %}
-<div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
-  {% for repo in site.data.repositories.github_repos %}
-    {% include repository/repo.html repository=repo %}
-  {% endfor %}
-</div>
-{% endif %}
+  .gallery-slide.active {
+    display: block;
+  }
 
----
+  .gallery-slide video {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
 
-## Forked Repositories (dynamic) -->
+  .caption {
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+
+  .caption a {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #b300b3;
+    text-decoration: none;
+  }
+
+  .caption a:hover {
+    text-decoration: underline;
+  }
+
+  .caption p {
+    color: #555;
+    font-size: 0.9rem;
+  }
+
+  .next-slide {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 0.5rem 1rem;
+    background-color:rgb(180, 180, 180);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .next-slide:hover {
+    background-color: #900090;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const nextSlideBtn = document.querySelector('.next-slide');
+    const slides = document.querySelectorAll('.gallery-slide');
+    let currentSlide = 0;
+
+    nextSlideBtn.addEventListener('click', () => {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    });
+  });
+</script>
+
+
+
+
+
+## UQMM Repositories
+
 <style>
   /* 主容器：网格布局 */
   .card-container {
