@@ -25,7 +25,7 @@ nav_order: 3
   </div>
 
   <!-- Slide 2 (example, add more like this) -->
-  <div class="gallery-slide">
+  <!-- <div class="gallery-slide">
     <video autoplay loop muted playsinline>
       <source src="/assets/video/sample_project.mp4" type="video/mp4">
       Your browser does not support the video tag.
@@ -34,7 +34,7 @@ nav_order: 3
       <a href="https://github.com/example/project2" target="_blank">Project 2</a>
       <p>Sample description of the second project with a video preview.</p>
     </div>
-  </div>
+  </div> -->
 
   <!-- Navigation Button -->
   <button class="next-slide">Next One ➡️</button>

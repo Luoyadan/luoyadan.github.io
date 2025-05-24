@@ -108,6 +108,9 @@ blockquote {
 # Lab News
 
 ### 2025
+[May ' 25] 1 paper accepted by TPAMI 2025
+- **[Open-CRB: Towards Open World Active Learning for 3D Object Detection](https://arxiv.org/pdf/2310.10391)**. ***Zhuoxiao Chen**, **Yadan Luo**, **Zixin Wang**, Zijian Wang, Zi Huang* 📝[Paper Link](https://arxiv.org/abs/2403.03726), 🛠️[Github]https://github.com/Luoyadan/CRB-active-3Ddet/tree/Open-CRB)
+
 [Feb ' 25] 1 paper accepted by CVPR 2025
 - **[Don't Shake the Wheel: Momentum-Aware Planning in End-to-End Autonomous Driving](https://arxiv.org/pdf/2503.03125)**. *Ziying Song, Caiyan Jia, Lin Liu, Hongyu Pan, Yongchang Zhang, Junming Wang, Xingyu Zhang, Shaoqing Xu, Lei Yang, **Yadan Luo**.* 📝[Paper Link](https://arxiv.org/pdf/2503.03125), 🛠️[Github](https://github.com/adept-thu/MomAD). 
 
