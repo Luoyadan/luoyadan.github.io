@@ -42,3 +42,48 @@ $max-content-width: {{ site.max_width }};
   background-position: right center;
   transform: translateY(-2px) scale(1.15);
 }
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: flex-start; // left-align the cards
+}
+
+.box {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 20px 16px;
+  text-align: center;
+  transition: box-shadow 0.2s;
+  width: 220px;
+  margin-bottom: 24px;
+}
+
+.img-gallery {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 12px;
+  border: 2px solid #eee;
+}
+
+.textbox.name {
+  font-size: 1.1em;
+  margin-bottom: 6px;
+}
+
+.textbox.info {
+  font-size: 0.98em;
+  color: #555;
+  margin-bottom: 2px;
+}
+
+.textbox.prev-info {
+  font-size: 0.85em;
+  color: #aaa;
+  margin-top: 4px;
+  font-style: italic;
+}

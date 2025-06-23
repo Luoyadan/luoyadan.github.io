@@ -30,57 +30,95 @@ blockquote {
 
 
 #### Postdoc Reseach Fellow
-<div class ="image-gallery">
-  <div class="box"><a href="https://www.linkedin.com/in/zi-xin-wang-6307811ab/?originalSubdomain=au" title="Zixin Wang">
-          <img src="/assets/img/student_preview/zixin.jpg" alt="Zixin"  class="img-gallery" />
-          <div class ="textbox" style="margin-top:10px;"> <b> Zixin Wang </b> </div>
-          <div class ="textbox" style="margin-top:3px;"> Postdoc <br> 2024.07-Present<br> </div></a>
-    </div>
+<div class="image-gallery">
+  <div class="box">
+    <a href="https://www.linkedin.com/in/zi-xin-wang-6307811ab/?originalSubdomain=au" title="Zixin Wang">
+      <img src="/assets/img/student_preview/zixin.jpg" alt="Zixin" class="img-gallery" />
+      <div class="textbox name"><b>Zixin Wang</b></div>
+      <div class="textbox info">
+        Postdoc (2024.07-Present)
+      </div>
+      <div class="textbox prev-info">
+        PhD@UQMM, 2021.07-2025.06
+      </div>
+    </a>
+  </div>
 </div>
 #### PhD Students
 <div class ="image-gallery">
   
-  <div class="box"><a href="https://zhuoxiao-chen.github.io/" title="Zhuoxiao Chen">
-         <img src="/assets/img/student_preview/ivan.jpg" alt="Aniket"  class="img-gallery" />
-         <div class ="textbox" style="margin-top:10px;"> <b> Zhuoxiao Chen </b> </div>
-         <div class ="textbox" style="margin-top:3px;"> Ph.D. <br> 2022.01-Present<br> </div></a>
-  </div>
+
 
   <div class="box"><a href="https://www.linkedin.com/in/djamahl-etchegaray-888873140/?originalSubdomain=au" title="Djamahl Etchegaray">
          <img src="/assets/img/student_preview/djamahl.png" alt="Djamahl"  class="img-gallery" />
          <div class ="textbox" style="margin-top:10px;"> <b> Djamahl Etchegaray </b> </div>
-         <div class ="textbox" style="margin-top:3px;">  Ph.D. <br> 2023.01-Present </div></a>
+         <div class="textbox info">PhD (2023.01-Present)</div>
+         <div class="textbox prev-info">Open-vocabulary & VLMs in AD<br>BSc (Math & CS)@UQ</div>
+         </a>
   </div>
 
   <div class="box"><a href="https://www.linkedin.com/in/jason-lim-a10a7a189/?originalSubdomain=au" title="Jia Syuen Lim">
          <img src="/assets/img/student_preview/jason-headshot.jpg" alt="Jia"  class="img-gallery" />
          <div class ="textbox" style="margin-top:10px;"> <b> Jia Syuen Lim </b> </div>
-         <div class ="textbox" style="margin-top:3px;">  Ph.D. <br> 2023.07-Present </div></a>
+         <div class="textbox info">PhD (2023.07-Present)</div>
+         <div class="textbox prev-info">Open-world detection and VLA<br>BSc@UQ</div>
+         </a>
   </div>
   <div class="box"><a href="" title="Yuxia Fu">
          <img src="/assets/img/student_preview/yuxia.jpg" alt="Yuxia"  class="img-gallery" />
          <div class ="textbox" style="margin-top:10px;"> <b> Yuxia Fu </b> </div>
-         <div class ="textbox" style="margin-top:3px;">  Ph.D. <br> 2024.01-Present </div></a>
+         <div class="textbox info">PhD (2024.01-Present)</div>
+         <div class="textbox prev-info">Efficient Knowledge Reuse<br>MSc@UQ</div>
+         </a>
   </div>
   <div class="box"><a href="" title="Fengyi Zhang">
          <img src="/assets/img/student_preview/fengyi.jpg" alt="Fengyi"  class="img-gallery" />
          <div class ="textbox" style="margin-top:10px;"> <b> Fengyi Zhang </b> </div>
-         <div class ="textbox" style="margin-top:3px;">  Ph.D. <br> 2024.07-Present </div></a>
+         <div class="textbox info">PhD (2024.07-Present)</div>
+         <div class="textbox prev-info">Gaussian Splatting in Test-time AD<br>MSc@Tongji Univ</div>
+         </a>
   </div>
   <div class="box"><a href="" title="Huitong Yang">
          <img src="/assets/img/student_preview/huitong.jpg" alt="Huitong"  class="img-gallery" />
          <div class ="textbox" style="margin-top:10px;"> <b> Huitong Yang </b> </div>
-         <div class ="textbox" style="margin-top:3px;">  Ph.D. <br> 2024.07-Present </div></a>
+         <div class="textbox info">PhD (2024.07-Present)</div>
+         <div class="textbox prev-info">Test-time Adaptation in E2E-AD<br>MSc@GDUT</div>
+         </a>
   </div>
 
   <div class="box"><a href="https://scholar.google.com/citations?user=X1sJkM8AAAAJ&hl=en" title="Zhizhen Zhang">
          <img src="/assets/img/student_preview/zhizhen.jpg" alt="Zhizhen"  class="img-gallery" />
          <div class ="textbox" style="margin-top:10px;"> <b> Zhizhen Zhang </b> </div>
-         <div class ="textbox" style="margin-top:3px;">  Ph.D. <br> 2025.01-Present </div></a>
+         <div class="textbox info">PhD (2025.01-Present)</div>
+         <div class="textbox prev-info">Generalizable Agents in Embodied AI<br>MSc@Tsinghua Uni</div>
+         </a>
+  </div>
+  <div class="box"><a href="https://scholar.google.com/citations?user=Jf8vi_sAAAAJ&hl=en" title="Zhizhen Zhang">
+         <img src="/assets/img/student_preview/xiangyu.jpg" alt="Xiangyu"  class="img-gallery" />
+         <div class ="textbox" style="margin-top:10px;"> <b> Xiangyu Sun </b> </div>
+         <div class="textbox info">PhD (2026.01-Present)</div>
+         <div class="textbox prev-info">Gaussian Splatting<br>Mphil@USYD</div>
+         </a>
   </div>
 
     <br>
  </div>
+#### Alumini
+<div class="image-gallery">
+  <div class="box">
+    <a href="https://zhuoxiao-chen.github.io/" title="Zhuoxiao Chen">
+      <img src="/assets/img/student_preview/ivan.jpg" alt="Ivan"  class="img-gallery" />
+      <div class="textbox name"> <b> Zhuoxiao Chen </b> </div>
+      <div class="textbox info">
+        Research Scientist @ Oracle
+      </div>
+      <div class="textbox prev-info">
+        PhD@UQMM, 2022.01-2025.06
+      </div>
+    </a>
+  </div>
+</div>
+
 
 #### Visiting Students / Data Science Capstone / Placement Supervision
 
@@ -100,7 +138,7 @@ blockquote {
 
 | 🏰 **[ICLR 2024](https://uqmm.gitbook.io/uqmm-iclr24-notes/)** (Yadan) - covering generalizaton & adaptation
 
-
+| 📝 **[CVPR 2025](https://shorturl.at/iMMsH)** (Yadan) - covering 3D vision & autonomous driving & embodied AI
 
 <br>
 
@@ -109,7 +147,7 @@ blockquote {
 
 ### 2025
 [May ' 25] 1 paper accepted by TPAMI 2025
-- **[Open-CRB: Towards Open World Active Learning for 3D Object Detection](https://arxiv.org/pdf/2310.10391)**. ***Zhuoxiao Chen**, **Yadan Luo**, **Zixin Wang**, Zijian Wang, Zi Huang* 📝[Paper Link](https://arxiv.org/abs/2403.03726), 🛠️[Github]https://github.com/Luoyadan/CRB-active-3Ddet/tree/Open-CRB)
+- **[Open-CRB: Towards Open World Active Learning for 3D Object Detection](https://arxiv.org/pdf/2310.10391)**. ***Zhuoxiao Chen**, **Yadan Luo**, **Zixin Wang**, Zijian Wang, Zi Huang* 📝[Paper Link](https://arxiv.org/abs/2403.03726), 🛠️[Github](https://github.com/Luoyadan/CRB-active-3Ddet/tree/Open-CRB)
 
 [Feb ' 25] 1 paper accepted by CVPR 2025
 - **[Don't Shake the Wheel: Momentum-Aware Planning in End-to-End Autonomous Driving](https://arxiv.org/pdf/2503.03125)**. *Ziying Song, Caiyan Jia, Lin Liu, Hongyu Pan, Yongchang Zhang, Junming Wang, Xingyu Zhang, Shaoqing Xu, Lei Yang, **Yadan Luo**.* 📝[Paper Link](https://arxiv.org/pdf/2503.03125), 🛠️[Github](https://github.com/adept-thu/MomAD). 
