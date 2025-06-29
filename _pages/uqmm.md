@@ -75,7 +75,7 @@ blockquote {
          <img src="/assets/img/student_preview/fengyi.jpg" alt="Fengyi"  class="img-gallery" />
          <div class ="textbox" style="margin-top:10px;"> <b> Fengyi Zhang </b> </div>
          <div class="textbox info">PhD (2024.07-Present)</div>
-         <div class="textbox prev-info">Gaussian Splatting in Test-time AD<br>MSc@Tongji Univ</div>
+         <div class="textbox prev-info">Gaussian Splatting in AD<br>MSc@Tongji Univ</div>
          </a>
   </div>
   <div class="box"><a href="" title="Huitong Yang">
@@ -96,7 +96,7 @@ blockquote {
   <div class="box"><a href="https://scholar.google.com/citations?user=Jf8vi_sAAAAJ&hl=en" title="Zhizhen Zhang">
          <img src="/assets/img/student_preview/xiangyu.jpg" alt="Xiangyu"  class="img-gallery" />
          <div class ="textbox" style="margin-top:10px;"> <b> Xiangyu Sun </b> </div>
-         <div class="textbox info">PhD (2026.01-Present)</div>
+         <div class="textbox info">PhD (2025.10-Present)</div>
          <div class="textbox prev-info">Gaussian Splatting<br>Mphil@USYD</div>
          </a>
   </div>
@@ -107,7 +107,7 @@ blockquote {
 <div class="image-gallery">
   <div class="box">
     <a href="https://zhuoxiao-chen.github.io/" title="Zhuoxiao Chen">
-      <img src="/assets/img/student_preview/ivan.jpg" alt="Ivan"  class="img-gallery" />
+      <img src="/assets/img/student_preview/ivan2.jpg" alt="Ivan"  class="img-gallery" />
       <div class="textbox name"> <b> Zhuoxiao Chen </b> </div>
       <div class="textbox info">
         Research Scientist @ Oracle

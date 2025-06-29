@@ -42,32 +42,49 @@ $max-content-width: {{ site.max_width }};
   background-position: right center;
   transform: translateY(-2px) scale(1.15);
 }
-
 .image-gallery {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
-  justify-content: flex-start; // left-align the cards
+  gap: 20px;
+  justify-content: flex-start;
+  width: 100%;
 }
 
 .box {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  padding: 20px 16px;
+  flex: 1 1 calc(25% - 10px); // 25%宽度减去gap
+  max-width: calc(25% - 120px);
+  min-width: 220px;
+  box-sizing: border-box;
+  margin-bottom: 14px;
   text-align: center;
-  transition: box-shadow 0.2s;
-  width: 220px;
-  margin-bottom: 24px;
+  padding: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
 }
-
-.img-gallery {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 12px;
-  border: 2px solid #eee;
+@media (max-width: 1200px) {
+  .box {
+    flex: 1 1 calc(25% - 10px); // 依然4个
+    max-width: calc(25% - 10px);
+  }
+}
+@media (max-width: 900px) {
+  .box {
+    flex: 1 1 calc(33.33% - 10px); // 3个
+    max-width: calc(33.33% - 10px);
+  }
+}
+@media (max-width: 600px) {
+  .box {
+    flex: 1 1 calc(50% - 10px); // 2个
+    max-width: calc(50% - 10px);
+  }
+}
+@media (max-width: 400px) {
+  .box {
+    flex: 1 1 100%; // 1个
+    max-width: 100%;
+  }
 }
 
 .textbox.name {
@@ -86,4 +103,13 @@ $max-content-width: {{ site.max_width }};
   color: #aaa;
   margin-top: 4px;
   font-style: italic;
+}
+
+.img-gallery {
+  width: 180px;         // 或你想要的尺寸
+  height: 180px;        // 宽高一致
+  object-fit: cover;    // 保证图片不变形
+  border-radius: 60%;   // 正圆
+  display: block;
+  margin: 0 auto 12px auto;
 }
