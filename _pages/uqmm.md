@@ -93,11 +93,18 @@ blockquote {
          <div class="textbox prev-info">Generalizable Agents in Embodied AI<br>MSc@Tsinghua Uni</div>
          </a>
   </div>
-  <div class="box"><a href="https://scholar.google.com/citations?user=Jf8vi_sAAAAJ&hl=en" title="Zhizhen Zhang">
+  <div class="box"><a href="https://scholar.google.com/citations?user=Jf8vi_sAAAAJ&hl=en" title="Xiangyu Sun">
          <img src="/assets/img/student_preview/xiangyu.jpg" alt="Xiangyu"  class="img-gallery" />
          <div class ="textbox" style="margin-top:10px;"> <b> Xiangyu Sun </b> </div>
          <div class="textbox info">PhD (2025.10-Present)</div>
          <div class="textbox prev-info">Gaussian Splatting<br>Mphil@USYD</div>
+         </a>
+  </div>
+  <div class="box"><a href="" title="Yuqi Zhang">
+         <img src="/assets/img/student_preview/yuqi.jpg" alt="Yuqi"  class="img-gallery" />
+         <div class ="textbox" style="margin-top:10px;"> <b> Yuqi Zhang </b> </div>
+         <div class="textbox info">PhD (2025.10-Present)</div>
+         <div class="textbox prev-info">Syn2Real in Embodied AI<br>MSc@Sichuan Uni</div>
          </a>
   </div>
 
