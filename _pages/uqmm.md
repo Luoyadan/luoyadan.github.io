@@ -154,7 +154,7 @@ blockquote {
 
 ### 2025
 [June' 25] 1 paper accepted by ICCV 2025
-- **[Is Less More? Exploring Token Condensation as Training-free Adaptation for CLIP](https://arxiv.org/pdf/2410.14729)**. ***Zixin Wang**, Dong Gong, Sen Wang, Zi Huang, **Yadan Luo*** 📝[Paper Link](https://arxiv.org/abs/2403.03726), 🛠️[Github]()
+- **[Is Less More? Exploring Token Condensation as Training-free Adaptation for CLIP](https://arxiv.org/pdf/2410.14729)**. ***Zixin Wang**, Dong Gong, Sen Wang, Zi Huang, **Yadan Luo**.* 📝[Paper Link](https://arxiv.org/abs/2403.03726), 🛠️[Github]()
 
 
 [May ' 25] 1 paper accepted by TPAMI 2025
