@@ -153,6 +153,10 @@ blockquote {
 # Lab News
 
 ### 2025
+[June' 25] 1 paper accepted by ICCV 2025
+- **[Is Less More? Exploring Token Condensation as Training-free Adaptation for CLIP](https://arxiv.org/pdf/2410.14729)**. ***Zixin Wang**, Dong Gong, Sen Wang, Zi Huang, **Yadan Luo*** 📝[Paper Link](https://arxiv.org/abs/2403.03726), 🛠️[Github]()
+
+
 [May ' 25] 1 paper accepted by TPAMI 2025
 - **[Open-CRB: Towards Open World Active Learning for 3D Object Detection](https://arxiv.org/pdf/2310.10391)**. ***Zhuoxiao Chen**, **Yadan Luo**, **Zixin Wang**, Zijian Wang, Zi Huang* 📝[Paper Link](https://arxiv.org/abs/2403.03726), 🛠️[Github](https://github.com/Luoyadan/CRB-active-3Ddet/tree/Open-CRB)
 
@@ -160,8 +164,8 @@ blockquote {
 - **[Don't Shake the Wheel: Momentum-Aware Planning in End-to-End Autonomous Driving](https://arxiv.org/pdf/2503.03125)**. *Ziying Song, Caiyan Jia, Lin Liu, Hongyu Pan, Yongchang Zhang, Junming Wang, Xingyu Zhang, Shaoqing Xu, Lei Yang, **Yadan Luo**.* 📝[Paper Link](https://arxiv.org/pdf/2503.03125), 🛠️[Github](https://github.com/adept-thu/MomAD). 
 
 [Feb '25] 2 papers accepted by ICLR 2025
-- **[MOS: Model Synergy for Test-Time Adaptation on LiDAR-Based 3D Object Detection](https://arxiv.org/pdf/2406.14878)**. ***Zhuoxiao Chen**,  Junjie Meng, Mahsa Baktashmotlagh, Zi Huang, **Yadan Luo**.* 📝[Paper Link](https://arxiv.org/pdf/2406.14878), 🛠️[Github](https://github.com/jason-lim26/DiPEx), 🎉Oral Presentation (1.8%). 
-- **[PolaFormer: Polarity-aware Linear Attention for Vision Transformers](https://arxiv.org/pdf/2501.15061)**. *Weikang Meng, **Yadan Luo**, Xin Li, Dongmei Jiang, Zheng Zhang* 📝[Paper Link](https://arxiv.org/pdf/2501.15061), 🛠️[Github](https://github.com/jason-lim26/DiPEx), 🤗[Huggingface](https://huggingface.co/ZachMeng/PolaFormer/tree/main).
+- **[MOS: Model Synergy for Test-Time Adaptation on LiDAR-Based 3D Object Detection](https://arxiv.org/pdf/2406.14878)**. ***Zhuoxiao Chen**,  Junjie Meng, Mahsa Baktashmotlagh, Zi Huang, **Yadan Luo**.* 📝[Paper Link](https://arxiv.org/pdf/2406.14878), 🛠️[Github](https://github.com/zhuoxiao-chen/MOS), 🎉Oral Presentation (1.8%). 
+- **[PolaFormer: Polarity-aware Linear Attention for Vision Transformers](https://arxiv.org/pdf/2501.15061)**. *Weikang Meng, **Yadan Luo**, Xin Li, Dongmei Jiang, Zheng Zhang* 📝[Paper Link](https://arxiv.org/pdf/2501.15061), 🛠️[Github](https://github.com/ZacharyMeng/PolaFormer), 🤗[Huggingface](https://huggingface.co/ZachMeng/PolaFormer/tree/main).
 
 
 #### 2024
