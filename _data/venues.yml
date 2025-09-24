@@ -4,19 +4,25 @@
 
 "PhysRev":
   url: https://journals.aps.org/
+  color: "#8B0000"
 "ECCV":
   url: https://eccv.ecva.net/
+  color: "#FF6B35"
 "NeurIPS":
   url: https://neurips.cc/
+  color: "#003366"
 
 "ICML":
   url: https://icml.cc/
+  color: "#FF6B35"
 
 "WACV":
   url: https://wacv2023.thecvf.com/home
+  color: "#FF6B35"
 
 "MM":
   url: https://2022.acmmm.org/
+  color: "#9370DB"
 
 "WWW":
   url: https://www.springer.com/journal/11280
@@ -24,23 +30,30 @@
 
 "ICLR":
   url: https://iclr.cc/
+  color: "#20B2AA"
 
 "ICCV":
   url: https://iccv2023.thecvf.com/
+  color: "#DC143C"
 
 "TPAMI":
   url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=34
+  color: "#2E8B57"
 
 "TMM":
   url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6046
+  color: "#2E8B57"
 
 "TKDE":
   url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=69
+  color: "#2E8B57"
 
 "PR":
   url: https://www.sciencedirect.com/journal/pattern-recognition
+  color: "#2E8B57"
 
 "TNNLS":
   url: https://cis.ieee.org/publications/t-neural-networks-and-learning-systems
+  color: "#2E8B57"
 
 
