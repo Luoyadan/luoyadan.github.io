@@ -171,7 +171,7 @@ profile:
                     </a>
             </div>
             <div class="box"><a href="https://www.linkedin.com/in/jason-lim-a10a7a189/?originalSubdomain=au" title="Jia Syuen Lim">
-                    <img src="/assets/img/student_preview/jason-headshot.jpg" alt="Jia"  class="img-gallery" />
+                    <img src="/assets/img/student_preview/jason.jpeg" alt="Jia"  class="img-gallery" />
                     <div class ="textbox" style="margin-top:10px;"> <b> Jia Syuen Lim </b> </div>
                     <div class="textbox info">PhD (2023.07-Present)</div>
                     <div class="textbox prev-info">Open-world detection and VLA<br>BSc@UQ</div>
@@ -199,7 +199,7 @@ profile:
                     </a>
             </div>
             <div class="box"><a href="https://scholar.google.com/citations?user=X1sJkM8AAAAJ&hl=en" title="Zhizhen Zhang">
-                    <img src="/assets/img/student_preview/zhizhen.jpg" alt="Zhizhen"  class="img-gallery" />
+                    <img src="/assets/img/student_preview/zhizhen.png" alt="Zhizhen"  class="img-gallery" />
                     <div class ="textbox" style="margin-top:10px;"> <b> Zhizhen Zhang </b> </div>
                     <div class="textbox info">PhD (2025.01-Present)</div>
                     <div class="textbox prev-info">Generalizable Agents in Embodied AI<br>MSc@Tsinghua Uni</div>
