@@ -191,13 +191,6 @@ profile:
                     <div class="textbox prev-info">Gaussian Splatting in AD<br>MSc@Tongji Univ</div>
                     </a>
             </div>
-            <div class="box"><a href="" title="Huitong Yang">
-                    <img src="/assets/img/student_preview/huitong.jpg" alt="Huitong"  class="img-gallery" />
-                    <div class ="textbox" style="margin-top:10px;"> <b> Huitong Yang </b> </div>
-                    <div class="textbox info">PhD (2024.07-Present)</div>
-                    <div class="textbox prev-info">Test-time Adaptation in E2E-AD<br>MSc@GDUT</div>
-                    </a>
-            </div>
             <div class="box"><a href="https://scholar.google.com/citations?user=X1sJkM8AAAAJ&hl=en" title="Zhizhen Zhang">
                     <img src="/assets/img/student_preview/zhizhen.png" alt="Zhizhen"  class="img-gallery" />
                     <div class ="textbox" style="margin-top:10px;"> <b> Zhizhen Zhang </b> </div>
