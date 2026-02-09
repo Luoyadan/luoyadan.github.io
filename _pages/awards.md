@@ -6,7 +6,7 @@ description:
 nav: true
 nav_order: 7
 ---
-
+- **SIGMM Rising Star Award**, 2025.
 - **[UQ Foundation Research Excellence Award](https://research-support.uq.edu.au/uq-research-and-innovation-awards-excellence)**, 2024.
 - **Distinguished Committee Member**, ACM Multimedia Asia 2024. 
 - **Outstanding Service Award**, ACM Multimedia 2024.

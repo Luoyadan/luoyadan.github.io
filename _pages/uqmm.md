@@ -150,17 +150,6 @@ profile:
 <!-- RIGHT COLUMN -->
 <div class="lab-right">
     <h2>Lab Members</h2>
-    <h3>Postdoc Research Fellow</h3>
-    <div class="image-gallery">
-    <div class="box">
-        <a href="https://www.linkedin.com/in/zi-xin-wang-6307811ab/?originalSubdomain=au" title="Zixin Wang">
-        <img src="/assets/img/student_preview/zixin.jpg" alt="Zixin" class="img-gallery" />
-        <div class="textbox name"><b>Zixin Wang</b></div>
-        <div class="textbox info">Postdoc (2024.07-Present)</div>
-        <div class="textbox prev-info">PhD@UQMM, 2021.07-2025.06</div>
-        </a>
-    </div>
-    </div>
     <h3>PhD Students</h3>
         <div class="image-gallery">
             <div class="box"><a href="https://www.linkedin.com/in/djamahl-etchegaray-888873140/?originalSubdomain=au" title="Djamahl Etchegaray">
@@ -223,6 +212,14 @@ profile:
             <div class="textbox prev-info">PhD@UQMM, 2022.01-2025.06</div>
             </a>
         </div>
+        <div class="box">
+        <a href="https://www.linkedin.com/in/zi-xin-wang-6307811ab/?originalSubdomain=au" title="Zixin Wang">
+        <img src="/assets/img/student_preview/zixin.jpg" alt="Zixin" class="img-gallery" />
+        <div class="textbox name"><b>Zixin Wang</b></div>
+        <div class="textbox info">AI Engineer @ Westpac</div>
+        <div class="textbox prev-info">PhD@UQMM, 2021.07-2025.06</div>
+        </a>
+    </div>
     </div>
     <h3>Visiting Students / Winter Research / DS Capstone / Placement Supervision</h3>
         <ul>
