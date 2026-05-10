@@ -235,7 +235,7 @@ profile:
         <li>🏰 <strong><a href="https://uqmm.gitbook.io/uqmm-iclr24-notes/">ICLR 2024</a></strong> (Yadan) – generalization & adaptation</li>
         <li>📝 <strong><a href="https://shorturl.at/iMMsH">CVPR 2025</a></strong> (Yadan) – 3D vision, autonomous driving, embodied AI</li>
     </ul>
-    <h2 style="margin-top:40px">Lab News</h2>
+    <!-- <h2 style="margin-top:40px">Lab News</h2>
     <details class="news-year" open>
         <summary>2025</summary>
         <div class="news-entry">[June '25] 1 paper accepted by ICCV 2025<br>
@@ -304,6 +304,6 @@ profile:
             <b>Open-RoadAtlas: Leveraging VLMs for Road Condition Survey with Real-Time Mobile Auditing</b>.<br>
             <i>Djamahl Etchegaray, Yadan Luo, Zachary FitzChance, Anthony Southon, Jinjiang Zhong</i>
         </div>
-    </details>
+    </details> -->
 </div>
 </div>

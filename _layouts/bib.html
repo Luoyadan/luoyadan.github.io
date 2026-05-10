@@ -1,16 +1,21 @@
 ---
 ---
-<div class="row">
+{% assign raw_topics = entry.topics | default: entry.topic | default: '' %}
+{% assign topic_attr = raw_topics | replace: ',', ' ' | replace: '  ', ' ' | strip %}
+<div class="row pub-bib-entry" data-topics="{{ topic_attr }}" data-year="{{ entry.year }}">
   <div class="col-sm-3 abbr" style="display: flex; flex-direction: column; align-items: center;">
     {%- if entry.abbr -%}
       {%- if site.data.venues[entry.abbr] -%}
-        {%- assign venue_style = nil -%}
-        {%- if site.data.venues[entry.abbr].color != blank -%}
-          {%- assign venue_style = site.data.venues[entry.abbr].color | prepend: 'style="background-color:' | append: '"' -%}
+        {%- assign v = site.data.venues[entry.abbr] -%}
+        {%- assign venue_hex = v.tint | default: v.color -%}
+        {%- if venue_hex != blank -%}
+          {%- capture venue_style %}style="--venue-tint: {{ venue_hex }}"{% endcapture -%}
+          <abbr class="badge w-100 venue-badge venue-badge--glass" {{ venue_style }}><a href="{{ v.url }}">{{ entry.abbr }}</a></abbr>
+        {%- else -%}
+          <abbr class="badge w-100 venue-badge venue-badge--glass venue-badge--glass-neutral"><a href="{{ v.url }}">{{ entry.abbr }}</a></abbr>
         {%- endif -%}
-        <abbr class="badge w-100" {% if venue_style %}{{venue_style}}{% endif %}><a href="{{site.data.venues[entry.abbr].url}}">{{entry.abbr}}</a></abbr>
       {%- else -%}
-        <abbr class="badge w-100">{{entry.abbr}}</abbr>
+        <abbr class="badge w-100 venue-badge venue-badge--glass venue-badge--glass-neutral">{{ entry.abbr }}</abbr>
       {%- endif -%}
     {%- endif -%}
     {%- if entry.preview -%}

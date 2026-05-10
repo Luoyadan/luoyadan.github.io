@@ -1,59 +1,122 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
+# Per-venue hue for glass badges: CSS uses --venue-tint (half-transparent “Apple glass”).
+# Legacy BibTeX venues can use `color` in this file; bib layout falls back to tint | color.
 
-"PhysRev":
-  url: https://journals.aps.org/
-  color: "#8B0000"
+"CVPR":
+  url: https://cvpr.thecvf.com/
+  tint: "#0A84FF"
+
+"ICCV":
+  url: https://iccv.thecvf.com/
+  tint: "#FF6482"
+
 "ECCV":
   url: https://eccv.ecva.net/
-  color: "#FF6B35"
+  tint: "#FF9F0A"
+
 "NeurIPS":
   url: https://neurips.cc/
-  color: "#003366"
+  tint: "#BF5AF2"
 
 "ICML":
   url: https://icml.cc/
-  color: "#FF6B35"
-
-"WACV":
-  url: https://wacv2023.thecvf.com/home
-  color: "#FF6B35"
-
-"MM":
-  url: https://2022.acmmm.org/
-  color: "#9370DB"
-
-"WWW":
-  url: https://www.springer.com/journal/11280
-  color: "#00369f"
+  tint: "#30D158"
 
 "ICLR":
   url: https://iclr.cc/
-  color: "#20B2AA"
+  tint: "#64D2FF"
 
-"ICCV":
-  url: https://iccv2023.thecvf.com/
-  color: "#DC143C"
+"IJCV":
+  url: https://www.springer.com/journal/11263
+  tint: "#AC8E68"
+
+"MM":
+  url: https://www.acmmm.org/
+  tint: "#5E5CE6"
+
+"AAAI":
+  url: https://aaai.org/conference/aaai/
+  tint: "#FF375F"
+
+"IJCAI":
+  url: https://www.ijcai.org/
+  tint: "#32ADE6"
+
+"WWW":
+  url: https://www.thewebconf.org/
+  tint: "#AF52DE"
+
+"SIGIR":
+  url: https://sigir.org/
+  tint: "#FFD60A"
+
+"CIKM":
+  url: https://www.cikmconference.org/
+  tint: "#00C7BE"
+
+"ICDE":
+  url: https://www.ieee-icde.org/
+  tint: "#2DB88A"
+
+"WACV":
+  url: https://wacv.thecvf.com/
+  tint: "#40C8E0"
+
+"PAKDD":
+  url: https://pakdd.org/
+  tint: "#FFB340"
+
+"ADC":
+  url: https://adcaconf.org/
+  tint: "#A2845E"
+
+"ICDM":
+  url: https://www.ieee-icdm.org/
+  tint: "#63E6E2"
+
+"ICME":
+  url: https://www.ieee-icme.org/
+  tint: "#B565D8"
+
+"MMAsia":
+  url: https://dl.acm.org/conference/mmasia
+  tint: "#9896FF"
+
+"IV":
+  url: https://ieee-iv.org/
+  tint: "#2981FF"
 
 "TPAMI":
   url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=34
-  color: "#2E8B57"
+  tint: "#34C759"
 
 "TMM":
   url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6046
-  color: "#2E8B57"
-
-"TKDE":
-  url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=69
-  color: "#2E8B57"
-
-"PR":
-  url: https://www.sciencedirect.com/journal/pattern-recognition
-  color: "#2E8B57"
+  tint: "#FF453A"
 
 "TNNLS":
   url: https://cis.ieee.org/publications/t-neural-networks-and-learning-systems
-  color: "#2E8B57"
+  tint: "#5856D6"
 
+"TKDE":
+  url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=69
+  tint: "#5EADDE"
 
+"PR":
+  url: https://www.sciencedirect.com/journal/pattern-recognition
+  tint: "#DDA0FF"
+
+"IEEE-BigData":
+  url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6687317
+  tint: "#FF6961"
+
+"Nature Comm":
+  url: https://www.nature.com/ncomms/
+  tint: "#5AC8FA"
+
+"AJP":
+  url: https://aapt.scitation.org/journal/ajp
+  tint: "#6D8AAB"
+
+"PhysRev":
+  url: https://journals.aps.org/
+  tint: "#C9353B"
