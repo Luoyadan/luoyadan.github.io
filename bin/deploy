@@ -95,6 +95,10 @@ export JEKYLL_ENV=production
 # Build site
 bundle exec jekyll build
 
+# Drop oversized assets that exceed GitHub's 100MB limit (Jekyll copies
+# gitignored files into _site if they exist on disk).
+find _site -type f -size +99M -print -delete
+
 # Delete and move files
 find . -maxdepth 1 ! -name '_site' ! -name '.git' ! -name 'CNAME' ! -name '.gitignore' -exec rm -rf {} \;
 mv _site/* .
