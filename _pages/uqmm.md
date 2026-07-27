@@ -152,13 +152,6 @@ profile:
     <h2>Lab Members</h2>
     <h3>PhD Students</h3>
         <div class="image-gallery">
-            <div class="box"><a href="https://www.linkedin.com/in/djamahl-etchegaray-888873140/?originalSubdomain=au" title="Djamahl Etchegaray">
-                    <img src="/assets/img/student_preview/djamahl.png" alt="Djamahl"  class="img-gallery" />
-                    <div class ="textbox" style="margin-top:10px;"> <b> Djamahl Etchegaray </b> </div>
-                    <div class="textbox info">PhD (2023.01-Present)</div>
-                    <div class="textbox prev-info">Open-vocabulary & VLMs in AD<br>BSc (Math & CS)@UQ</div>
-                    </a>
-            </div>
             <div class="box"><a href="https://www.linkedin.com/in/jason-lim-a10a7a189/?originalSubdomain=au" title="Jia Syuen Lim">
                     <img src="/assets/img/student_preview/jason.jpeg" alt="Jia"  class="img-gallery" />
                     <div class ="textbox" style="margin-top:10px;"> <b> Jia Syuen Lim </b> </div>
@@ -191,14 +184,14 @@ profile:
                     <img src="/assets/img/student_preview/xiangyu.jpg" alt="Xiangyu"  class="img-gallery" />
                     <div class ="textbox" style="margin-top:10px;"> <b> Xiangyu Sun </b> </div>
                     <div class="textbox info">PhD (2025.10-Present)</div>
-                    <div class="textbox prev-info">Gaussian Splatting<br>Mphil@USYD</div>
+                    <div class="textbox prev-info">World Model<br>Mphil@USYD</div>
                     </a>
             </div>
             <div class="box"><a href="" title="Yuqi Zhang">
                     <img src="/assets/img/student_preview/yuqi.jpg" alt="Yuqi"  class="img-gallery" />
                     <div class ="textbox" style="margin-top:10px;"> <b> Yuqi Zhang </b> </div>
                     <div class="textbox info">PhD (2025.10-Present)</div>
-                    <div class="textbox prev-info">Syn2Real in Embodied AI<br>MSc@Sichuan Uni</div>
+                    <div class="textbox prev-info">Physical Real2Sim<br>MSc@Sichuan Uni</div>
                     </a>
             </div>
         </div>
@@ -206,20 +199,28 @@ profile:
     <div class="image-gallery">
         <div class="box">
             <a href="https://zhuoxiao-chen.github.io/" title="Zhuoxiao Chen">
-            <img src="/assets/img/student_preview/ivan2.jpg" alt="Ivan" class="img-gallery" />
-            <div class="textbox name"><b>Zhuoxiao Chen</b></div>
-            <div class="textbox info">Research Scientist @ Oracle</div>
-            <div class="textbox prev-info">PhD@UQMM, 2022.01-2025.06</div>
+                <img src="/assets/img/student_preview/ivan2.jpg" alt="Ivan" class="img-gallery" />
+                <div class="textbox name"><b>Zhuoxiao Chen</b></div>
+                <div class="textbox info">-> Sr Research Scientist @ MongoDB</div>
+                <div class="textbox prev-info">PhD@UQMM, 2022.01-2025.06</div>
             </a>
         </div>
         <div class="box">
-        <a href="https://www.linkedin.com/in/zi-xin-wang-6307811ab/?originalSubdomain=au" title="Zixin Wang">
-        <img src="/assets/img/student_preview/zixin.jpg" alt="Zixin" class="img-gallery" />
-        <div class="textbox name"><b>Zixin Wang</b></div>
-        <div class="textbox info">AI Engineer @ Westpac</div>
-        <div class="textbox prev-info">PhD@UQMM, 2021.07-2025.06</div>
-        </a>
-    </div>
+            <a href="https://www.linkedin.com/in/zi-xin-wang-6307811ab/?originalSubdomain=au" title="Zixin Wang">
+                <img src="/assets/img/student_preview/zixin.jpg" alt="Zixin" class="img-gallery" />
+                <div class="textbox name"><b>Zixin Wang</b></div>
+                <div class="textbox info">-> AI Engineer @ Westpac</div>
+                <div class="textbox prev-info">PhD@UQMM, 2021.07-2025.06</div>
+            </a>
+        </div>
+        <div class="box">
+            <a href="https://www.linkedin.com/in/djamahl-etchegaray-888873140/?originalSubdomain=au" title="Djamahl Etchegaray">
+                <img src="/assets/img/student_preview/djamahl.png" alt="Djamahl" class="img-gallery" />
+                <div class="textbox name"><b>Djamahl Etchegaray</b></div>
+                <div class="textbox info">-> Research Scientist @ Atlassian</div>
+                <div class="textbox prev-info">PhD@UQMM, 2023.01-2026.08</div>
+            </a>
+        </div>
     </div>
     <h3>Visiting Students / Winter Research / DS Capstone / Placement Supervision</h3>
         <ul>

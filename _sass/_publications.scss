@@ -1,26 +1,35 @@
-// Publications hub & topic filter (/publications/)
+// Publications hub & topic filter — Apple-style frosted glass
 .pub-hub {
-  --pub-card-bg: rgba(255, 255, 255, 0.72);
-  --pub-card-border: rgba(124, 58, 237, 0.18);
-  --pub-glow: rgba(124, 58, 237, 0.35);
-  --pub-chip-bg: rgba(255, 255, 255, 0.65);
-  --pub-chip-border: rgba(124, 58, 237, 0.22);
+  --pub-glass: rgba(255, 255, 255, 0.55);
+  --pub-glass-strong: rgba(255, 255, 255, 0.78);
+  --pub-glass-border: rgba(255, 255, 255, 0.55);
+  --pub-glass-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 8px 24px rgba(0, 0, 0, 0.06);
+  --pub-chip-text: rgba(0, 0, 0, 0.62);
+  --pub-chip-text-active: rgba(0, 0, 0, 0.92);
+  --pub-chip-hover: rgba(255, 255, 255, 0.42);
+  --pub-meta: rgba(0, 0, 0, 0.38);
 }
 
 html[data-theme="dark"] .pub-hub {
-  --pub-card-bg: rgba(24, 24, 32, 0.78);
-  --pub-card-border: rgba(167, 139, 250, 0.22);
-  --pub-glow: rgba(167, 139, 250, 0.25);
-  --pub-chip-bg: rgba(32, 32, 44, 0.85);
-  --pub-chip-border: rgba(167, 139, 250, 0.28);
+  --pub-glass: rgba(44, 44, 46, 0.55);
+  --pub-glass-strong: rgba(58, 58, 60, 0.82);
+  --pub-glass-border: rgba(255, 255, 255, 0.1);
+  --pub-glass-shadow: 0 1px 2px rgba(0, 0, 0, 0.25), 0 10px 28px rgba(0, 0, 0, 0.35);
+  --pub-chip-text: rgba(255, 255, 255, 0.62);
+  --pub-chip-text-active: rgba(255, 255, 255, 0.96);
+  --pub-chip-hover: rgba(255, 255, 255, 0.08);
+  --pub-meta: rgba(255, 255, 255, 0.4);
 }
 
 .pub-hub__intro {
-  border-radius: 12px;
-  padding: 1.25rem 1.35rem;
-  margin-bottom: 1.5rem;
-  background: color-mix(in srgb, var(--global-theme-color) 6%, var(--global-bg-color));
-  border: 1px solid color-mix(in srgb, var(--global-divider-color) 65%, transparent);
+  border-radius: 16px;
+  padding: 0.95rem 1.15rem;
+  margin-bottom: 1.15rem;
+  background: var(--pub-glass);
+  border: 1px solid var(--pub-glass-border);
+  box-shadow: var(--pub-glass-shadow);
+  backdrop-filter: saturate(180%) blur(18px);
+  -webkit-backdrop-filter: saturate(180%) blur(18px);
 }
 
 .pub-hub__intro-inner {
@@ -31,61 +40,159 @@ html[data-theme="dark"] .pub-hub {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.6rem;
-  margin-bottom: 0.75rem;
+  gap: 0.55rem;
+  margin-bottom: 0.9rem;
+  padding: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
 .pub-filter-chip {
   appearance: none;
-  border: 1px solid var(--pub-chip-border);
-  background: var(--pub-chip-bg);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border: 1px solid var(--pub-glass-border);
+  background: var(--pub-glass);
+  backdrop-filter: saturate(180%) blur(18px);
+  -webkit-backdrop-filter: saturate(180%) blur(18px);
   border-radius: 999px;
-  padding: 0.45rem 1rem;
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  color: inherit;
+  padding: 0.5rem 1.05rem;
+  min-height: 2.15rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  color: var(--pub-chip-text);
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease,
-    background 0.2s ease;
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 4px 14px rgba(0, 0, 0, 0.05);
+  transition:
+    color 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+    background 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+  animation: pub-chip-in 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.pub-filter-chip:nth-child(1) { animation-delay: 0.02s; }
+.pub-filter-chip:nth-child(2) { animation-delay: 0.06s; }
+.pub-filter-chip:nth-child(3) { animation-delay: 0.1s; }
+.pub-filter-chip:nth-child(4) { animation-delay: 0.14s; }
+.pub-filter-chip:nth-child(5) { animation-delay: 0.18s; }
+
+@keyframes pub-chip-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 .pub-filter-chip:hover {
-  border-color: color-mix(in srgb, var(--global-theme-color) 35%, var(--global-divider-color));
+  color: var(--pub-chip-text-active);
+  background: var(--pub-glass-strong);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06), 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.pub-filter-chip:active {
+  transform: scale(0.97);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 }
 
 .pub-filter-chip:focus-visible {
-  outline: 2px solid color-mix(in srgb, var(--global-theme-color) 45%, transparent);
-  outline-offset: 2px;
+  outline: none;
+  box-shadow:
+    0 0 0 3px rgba(0, 0, 0, 0.08),
+    0 4px 14px rgba(0, 0, 0, 0.08);
 }
 
-.pub-filter-chip--all.is-active {
-  border-color: color-mix(in srgb, var(--global-theme-color) 40%, transparent);
-  background: color-mix(in srgb, var(--global-theme-color) 12%, var(--global-bg-color));
+html[data-theme="dark"] .pub-filter-chip:focus-visible {
+  box-shadow:
+    0 0 0 3px rgba(255, 255, 255, 0.14),
+    0 4px 14px rgba(0, 0, 0, 0.35);
 }
 
-.pub-filter-chip:not(.pub-filter-chip--all).is-active {
-  color: #fff;
-  border-color: transparent;
-  background-image: var(--chip-gradient);
+.pub-filter-chip.is-active {
+  color: var(--pub-chip-text-active);
+  background: color-mix(
+    in srgb,
+    var(--chip-accent, var(--global-theme-color)) 16%,
+    var(--pub-glass-strong)
+  );
+  border-color: var(--pub-glass-border);
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.05),
+    0 6px 18px rgba(0, 0, 0, 0.1),
+    inset 0 0 0 0.5px rgba(255, 255, 255, 0.4);
+}
+
+html[data-theme="dark"] .pub-filter-chip.is-active {
+  background: color-mix(
+    in srgb,
+    var(--chip-accent, var(--global-theme-color)) 22%,
+    var(--pub-glass-strong)
+  );
 }
 
 .pub-filter-chip__icon {
-  font-size: 1.05rem;
+  font-size: 0.9rem;
   line-height: 1;
+  opacity: 0.72;
+  transition: opacity 0.25s ease, transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.pub-filter-chip:hover .pub-filter-chip__icon,
+.pub-filter-chip.is-active .pub-filter-chip__icon {
+  opacity: 1;
+}
+
+.pub-filter-chip.is-active .pub-filter-chip__icon {
+  transform: scale(1.06);
+}
+
+.pub-filter-chip__label {
+  white-space: nowrap;
 }
 
 .pub-filter-meta {
   margin-bottom: 1rem !important;
+  color: var(--pub-meta) !important;
+  font-size: 0.78rem !important;
+  letter-spacing: -0.01em;
+  transition: opacity 0.25s ease;
 }
 
 .pub-hub .publications {
   margin-top: 0.25rem;
+}
+
+// Year timeline headers (jekyll-scholar --group_by year → h2.bibliography)
+.publications h2.bibliography,
+.publications h2.year {
+  color: var(--global-text-color-light);
+  border-top: 1px solid var(--global-divider-color);
+  padding-top: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  text-align: right;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.publications h2.bibliography:first-child,
+.publications h2.year:first-child {
+  margin-top: 0.5rem;
 }
 
 .pub-hub .publications > ol.bibliography,
@@ -94,89 +201,89 @@ html[data-theme="dark"] .pub-hub {
   list-style: none;
 }
 
-// Venue pills: stronger tint + thicker accent bar (readable in light & dark)
-.publications ol.bibliography li .abbr abbr.venue-badge--glass {
-  display: block !important;
-  width: 100% !important;
-  margin: 0 auto !important;
-  padding: 0.42rem 0.7rem !important;
-  border-radius: 8px !important;
-  font-size: 0.74rem !important;
-  font-weight: 600 !important;
-  letter-spacing: 0.03em !important;
-  border: 1px solid
-    color-mix(in srgb, var(--venue-tint, #8e8e93) 35%, var(--global-divider-color)) !important;
-  background-color: color-mix(
-    in srgb,
-    var(--global-bg-color) 72%,
-    var(--venue-tint, #8e8e93)
-  ) !important;
-  border-left: 5px solid var(--venue-tint, #636366) !important;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06) !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
+// Classic solid venue badges (Dong Gong / al-folio style)
+.publications ol.bibliography li .abbr abbr.badge {
+  display: inline-block;
+  width: auto;
+  min-width: 4.5rem;
+  margin: 0;
+  padding: 0.4rem 0.75rem;
+  border-radius: 0.35rem;
+  border: none;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: var(--global-card-bg-color) !important;
+  background-color: var(--global-theme-color) !important;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
-.publications ol.bibliography li .abbr abbr.venue-badge--glass a {
-  color: var(--global-text-color) !important;
-  font-weight: 600 !important;
+.publications ol.bibliography li .abbr abbr.badge a {
+  color: var(--global-card-bg-color) !important;
+  font-weight: 700;
 }
 
-.publications ol.bibliography li .abbr abbr.venue-badge--glass a:hover {
-  color: var(--global-hover-color) !important;
-  text-decoration: none !important;
+.publications ol.bibliography li .abbr abbr.badge a:hover {
+  color: var(--global-card-bg-color) !important;
+  text-decoration: none;
 }
 
-.publications ol.bibliography li .abbr abbr.venue-badge--glass-neutral {
-  border-left: 5px solid color-mix(
-    in srgb,
-    var(--global-text-color-light) 55%,
-    var(--global-divider-color)
-  ) !important;
-  border-top-color: var(--global-divider-color) !important;
-  border-right-color: var(--global-divider-color) !important;
-  border-bottom-color: var(--global-divider-color) !important;
-  background-color: color-mix(
-    in srgb,
-    var(--global-bg-color) 88%,
-    var(--global-text-color-light)
-  ) !important;
+.publications ol.bibliography li .abbr .preview {
+  display: block;
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  aspect-ratio: 200 / 95;
+  margin-top: 0.55rem;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  object-position: center;
 }
 
-html[data-theme="dark"] .publications ol.bibliography li .abbr abbr.venue-badge--glass {
-  background-color: color-mix(
-    in srgb,
-    var(--global-bg-color) 62%,
-    var(--venue-tint, #98989d)
-  ) !important;
-  border-color: color-mix(
-      in srgb,
-      var(--venue-tint, #98989d) 42%,
-      var(--global-divider-color)
-    )
-    !important;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35) !important;
+.publications ol.bibliography li .abbr video.preview {
+  background: #111;
+  pointer-events: none;
 }
 
-html[data-theme="dark"]
-  .publications
-  ol.bibliography
-  li
-  .abbr
-  abbr.venue-badge--glass-neutral {
-  background-color: rgba(255, 255, 255, 0.06) !important;
+.publications ol.bibliography li .links .award-badge {
+  background-color: #f4722b !important;
+  color: #fff !important;
+  border: none !important;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  padding: 0.18rem 0.55rem !important;
+  line-height: 1.2;
+  white-space: nowrap;
+  vertical-align: middle;
 }
 
-@supports not (background: color-mix(in srgb, red 50%, transparent)) {
-  .publications ol.bibliography li .abbr abbr.venue-badge--glass:not(.venue-badge--glass-neutral) {
-    background-color: #ebebef !important;
-    border: 1px solid rgba(0, 0, 0, 0.12) !important;
-    border-left-width: 5px !important;
+// Smooth show/hide when filtering
+.pub-hub .publications ol.bibliography > li {
+  transition: opacity 0.28s ease, transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.pub-hub .publications ol.bibliography > li[hidden],
+.pub-hub .publications ol.bibliography > li[style*="display: none"] {
+  opacity: 0;
+  transform: translateY(4px);
+}
+
+@media (max-width: 576px) {
+  .pub-filter-bar {
+    width: 100%;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .pub-filter-chip {
+  .pub-filter-chip,
+  .pub-filter-chip__icon,
+  .pub-filter-meta,
+  .pub-hub .publications ol.bibliography > li {
+    animation: none !important;
     transition: none !important;
   }
 }

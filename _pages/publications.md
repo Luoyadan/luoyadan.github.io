@@ -9,14 +9,15 @@ nav_order: 1
 
 <div class="pub-hub" markdown="0">
 
-  <div class="pub-hub__intro">
+  <!-- <div class="pub-hub__intro">
     <div class="pub-hub__intro-inner">
       <p class="mb-0">
-        <strong><a href="https://scholar.google.com/citations?user={{ site.scholar_userid }}" target="_blank" rel="noopener noreferrer">Google Scholar</a></strong>
-        mirrors the complete list. Below, everything is shown <strong>newest first</strong>. Use the topic chips to narrow the list (OR logic when several are on). Assign <code>topic</code> or comma-separated <code>topics</code> in <code>_bibliography/papers.bib</code>.
+        Full publication list:
+        <strong><a href="https://scholar.google.com/citations?user={{ site.scholar_userid }}" target="_blank" rel="noopener noreferrer">Google Scholar</a></strong>.
+        Use the topic chips to filter (OR logic when several are on).
       </p>
     </div>
-  </div>
+  </div> -->
 
   <div
     class="pub-filter-bar"
@@ -37,7 +38,7 @@ nav_order: 1
       class="pub-filter-chip"
       data-pub-filter-topic="{{ theme.slug }}"
       aria-pressed="false"
-      style="--chip-gradient: linear-gradient({{ theme.gradient }})"
+      style="--chip-accent: {{ theme.accent }}"
     >
       <span class="pub-filter-chip__icon" aria-hidden="true">{{ theme.icon }}</span>
       <span class="pub-filter-chip__label">{{ theme.filter_label }}</span>
@@ -50,7 +51,7 @@ nav_order: 1
   </p>
 
   <div class="publications" id="pub-filter-list">
-    {% bibliography -f papers -q @* --sort_by year --order descending %}
+    {% bibliography -f papers -q @* --group_by year --group_order descending %}
   </div>
 
 </div>
@@ -61,10 +62,10 @@ nav_order: 1
   var root = document.getElementById("pub-filter-list");
   if (!hub || !root) return;
 
-  var items = Array.prototype.slice.call(root.querySelectorAll(":scope > ol.bibliography > li"));
-  if (!items.length) {
-    items = Array.prototype.slice.call(root.querySelectorAll("ol.bibliography > li"));
-  }
+  var items = Array.prototype.slice.call(root.querySelectorAll("ol.bibliography > li"));
+  var yearHeads = Array.prototype.slice.call(
+    root.querySelectorAll("h2.bibliography, h2.year")
+  );
   var chips = hub.querySelectorAll("[data-pub-filter-topic]");
   var statusEl = hub.querySelector("[data-pub-filter-status]");
   var active = {};
@@ -99,6 +100,23 @@ nav_order: 1
     });
   }
 
+  function syncYearSections() {
+    yearHeads.forEach(function (h2) {
+      var ol = h2.nextElementSibling;
+      while (ol && ol.tagName !== "OL") ol = ol.nextElementSibling;
+      if (!ol || !ol.classList.contains("bibliography")) {
+        h2.hidden = false;
+        return;
+      }
+      var any = Array.prototype.some.call(ol.children, function (li) {
+        return li.tagName === "LI" && !li.hidden;
+      });
+      h2.hidden = !any;
+      ol.hidden = !any;
+      ol.style.display = any ? "" : "none";
+    });
+  }
+
   function applyFilter() {
     var n = 0;
     items.forEach(function (li) {
@@ -107,11 +125,11 @@ nav_order: 1
       li.style.display = ok ? "" : "none";
       if (ok) n++;
     });
+    syncYearSections();
     if (statusEl) {
-      statusEl.textContent =
-        hasActiveFilter()
-          ? "Showing " + n + " of " + items.length + " (newest first among matches)"
-          : "Showing all " + items.length + " publications (newest first)";
+      statusEl.textContent = hasActiveFilter()
+        ? "Showing " + n + " of " + items.length + " (newest first among matches)"
+        : "Showing all " + items.length + " publications (newest first)";
     }
   }
 

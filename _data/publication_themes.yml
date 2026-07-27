@@ -5,6 +5,7 @@
   title: Adaptation & open worlds
   tagline: Test-time adaptation, domain shift, OOD detection, generalization, and multimodal retrieval
   icon: 🎯
+  accent: "#8b5cf6"
   gradient: "135deg, #7c3aed 0%, #a855f7 45%, #c084fc 100%"
 
 - id: efficiency
@@ -13,6 +14,7 @@
   title: Efficiency & lean models
   tagline: Linear attention, token condensation, dataset distillation, and fast inference
   icon: ⚡
+  accent: "#06b6d4"
   gradient: "135deg, #0891b2 0%, #06b6d4 50%, #22d3ee 100%"
 
 - id: autonomous-driving
@@ -21,6 +23,7 @@
   title: Autonomous driving & 3D scene AI
   tagline: End-to-end planning, LiDAR / occupancy, open-vocabulary 3D, and spatial perception
   icon: 🚗
+  accent: "#f97316"
   gradient: "135deg, #ea580c 0%, #f97316 45%, #fb923c 100%"
 
 - id: embodied
@@ -29,4 +32,5 @@
   title: Embodied & VLA agents
   tagline: Vision–language–action, embodied pretraining, and agentic generalization
   icon: 🤖
+  accent: "#10b981"
   gradient: "135deg, #059669 0%, #10b981 50%, #34d399 100%"
