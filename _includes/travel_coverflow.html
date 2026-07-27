@@ -1,0 +1,28 @@
+{% if site.data.group_travel_gallery and site.data.group_travel_gallery.size > 0 %}
+<section class="travel-coverflow" aria-label="Lab travel gallery" data-travel-coverflow>
+  <div class="travel-coverflow__stage">
+    <div class="travel-coverflow__track" data-travel-track>
+      {% for trip in site.data.group_travel_gallery %}
+        {% assign img_src = '/assets/img/group_travel/' | append: trip.image | relative_url %}
+        <figure class="travel-coverflow__card" data-travel-card data-index="{{ forloop.index0 }}">
+          <img class="travel-coverflow__img" src="{{ img_src }}" alt="{{ trip.title | escape }}" loading="lazy" decoding="async" draggable="false">
+          <figcaption class="travel-coverflow__veil">
+            <div class="travel-coverflow__copy">
+              {% if trip.year %}<span class="travel-coverflow__year">{{ trip.year }}</span>{% endif %}
+              <p class="travel-coverflow__title">{{ trip.title }}</p>
+              {% if trip.caption %}<p class="travel-coverflow__caption">{{ trip.caption }}</p>{% endif %}
+            </div>
+          </figcaption>
+        </figure>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="travel-coverflow__controls">
+    <button type="button" class="travel-coverflow__btn" data-travel-prev aria-label="Previous photo">‹</button>
+    <div class="travel-coverflow__dots" data-travel-dots role="tablist" aria-label="Travel photos"></div>
+    <button type="button" class="travel-coverflow__btn" data-travel-next aria-label="Next photo">›</button>
+  </div>
+</section>
+<script defer src="{{ '/assets/js/travel-coverflow.js' | relative_url }}"></script>
+{% endif %}

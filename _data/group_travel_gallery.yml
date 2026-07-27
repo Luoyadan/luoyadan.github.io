@@ -1,0 +1,53 @@
+# Lab travel / moments shown in the 3D carousel on /uqmm/
+# Images live in assets/img/group_travel/
+
+- title: "The Web Conference"
+  caption: "Sydney, 2025"
+  image: TheWeb_Sydney_2025.jpg
+  year: 2025
+
+- title: "ICLR"
+  caption: "Singapore, 2025"
+  image: ICLR_Singapore_2025.jpg
+  year: 2025
+
+- title: "ICCV"
+  caption: "Honolulu, 2025"
+  image: ICCV_2025.jpg
+  year: 2025
+
+- title: "ICCV Poster"
+  caption: "Honolulu, 2025"
+  image: poster_ICCV_25.jpg
+  year: 2025
+
+- title: "CVPR Poster"
+  caption: "Denver, 2026"
+  image: poster_CVPR_2026.jpg
+  year: 2026
+
+- title: "ADC Banquet"
+  caption: "Bali, 2025"
+  image: ADC_Bali_2025_Banquet.jpg
+  year: 2025
+
+- title: "ADC"
+  caption: "Bali, 2025"
+  image: ADC_Bali_2025.jpg
+  year: 2025
+
+- title: "Gold Coast Retreat"
+  caption: "2025"
+  image: GoldCoast_2025.jpg
+  year: 2025
+
+- title: "UQ Open Day"
+  caption: "2025"
+  image: Openday_2025.jpg
+  year: 2025
+
+- title: "Open Day Interview"
+  caption: "Zhizhen Zhang, 2025"
+  image: Zhizhen_Zhang_Interview_Openday_2025.jpg
+  year: 2025
+

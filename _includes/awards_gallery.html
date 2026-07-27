@@ -1,0 +1,39 @@
+{% comment %}
+  params:
+    items  - site.data.* gallery array
+    dir    - folder under /assets/img/ (e.g. my_awards, group_awards)
+    label  - aria-label
+{% endcomment %}
+{% assign gallery_items = include.items %}
+{% assign gallery_dir = include.dir | default: 'my_awards' %}
+{% assign gallery_label = include.label | default: 'Award gallery' %}
+{% if gallery_items and gallery_items.size > 0 %}
+<section class="award-gallery" aria-label="{{ gallery_label }}">
+  <div class="award-gallery__grid">
+    {% for award in gallery_items %}
+      {% assign img_src = '/assets/img/' | append: gallery_dir | append: '/' | append: award.image | relative_url %}
+      {% if award.pdf %}
+        {% assign card_href = '/assets/img/' | append: gallery_dir | append: '/' | append: award.pdf | relative_url %}
+        <a class="award-gallery__card" href="{{ card_href }}" target="_blank" rel="noopener noreferrer" aria-label="{{ award.title | escape }} (open certificate)">
+      {% else %}
+        <figure class="award-gallery__card">
+      {% endif %}
+          <div class="award-gallery__media">
+            <img class="award-gallery__img" src="{{ img_src }}" alt="{{ award.title | escape }}" loading="lazy" decoding="async">
+            <div class="award-gallery__veil" aria-hidden="true">
+              <div class="award-gallery__copy">
+                {% if award.year %}<span class="award-gallery__year">{{ award.year }}</span>{% endif %}
+                <p class="award-gallery__title">{{ award.title }}</p>
+                {% if award.caption %}<p class="award-gallery__caption">{{ award.caption }}</p>{% endif %}
+              </div>
+            </div>
+          </div>
+      {% if award.pdf %}
+        </a>
+      {% else %}
+        </figure>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+{% endif %}

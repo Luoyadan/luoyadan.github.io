@@ -2,55 +2,81 @@
 layout: lab
 title: UQMM Lab
 permalink: /uqmm/
-description: 
+description:
 nav: true
-order: 1
+nav_order: 2
 profile:
   align: left
   image: uqmm-color.png
 ---
 
-
 <style>
 .lab-container {
-  display: flex;
-  gap: 40px;
-  align-items: flex-start;
+  display: block;
   margin-top: 30px;
-}
-.lab-left {
-  flex: 0 0 300px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  width: 100%;
+  max-width: 100%;
 }
 .lab-right {
-  flex: 1;
-  min-width: 1000px;
-}
-.instagram-box {
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  padding: 12px;
-  backdrop-filter: blur(4px);
-  border: 1px solid #e0e0e0;
-}
-.instagram-box h3 {
-  font-size: 16px;
-  margin: 0 0 10px 0;
-  color: #333;
-  font-weight: 600;
-  border-left: 4px solid #E1306C;
-  padding-left: 8px;
-}
-.instagram-box iframe {
   width: 100%;
-  height: 360px;
-  border: none;
-  border-radius: 8px;
+  min-width: 0;
 }
-
+.lab-showcase {
+  margin-top: 2.5rem;
+  width: 100%;
+  clear: both;
+}
+.lab-showcase h2 {
+  margin-top: 1.75rem;
+  margin-bottom: 0.85rem;
+}
+/* Lab members: 4 per row, compact spacing */
+.lab-right .image-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.85rem 0.45rem;
+  width: 100%;
+  max-width: 860px;
+  justify-items: center;
+  align-items: start;
+}
+.lab-right .box {
+  flex: none;
+  width: 100%;
+  max-width: 200px;
+  min-width: 0;
+  margin-bottom: 0;
+}
+.lab-right .img-gallery {
+  width: 156px;
+  height: 156px;
+  max-width: 100%;
+  margin-bottom: 8px;
+}
+.lab-right .textbox {
+  margin-top: 4px !important;
+}
+@media (max-width: 900px) {
+  .lab-right .image-gallery {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: 680px;
+  }
+}
+@media (max-width: 700px) {
+  .lab-right .image-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 420px;
+  }
+  .lab-right .img-gallery {
+    width: 136px;
+    height: 136px;
+  }
+}
+@media (max-width: 420px) {
+  .lab-right .image-gallery {
+    grid-template-columns: 1fr;
+  }
+}
 
 .news-year {
   margin-bottom: 1em;
@@ -103,7 +129,8 @@ profile:
 
 <div class="lab-container">
 
-<!-- LEFT COLUMN -->
+{% comment %}
+<!-- LEFT COLUMN: Instagram / YouTube — restore by removing this comment block -->
 <div class="lab-left">
   <div class="instagram-box">
     <h3>
@@ -114,40 +141,22 @@ profile:
     <script src="https://snapwidget.com/js/snapwidget.js"></script>
     <iframe src="https://snapwidget.com/embed/1104447" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" title="Follow us @uqmm_lab"></iframe>
   </div>
-        <div style="
-        border-left: 4px solid #FFFFFF;
-        border-radius: 12px;
-        padding: 16px;
-        background: white;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        font-size: 14px;
-        max-width: 100%;
-        margin-bottom: 20px;
-        ">
-        <div style="margin-bottom: 12px;">
-            🎥 <a href="https://youtu.be/9Bf8jkcqO7I" target="_blank" rel="noopener" style="text-decoration: none; color: #000; font-weight: 600;">
-            <span style="font-weight: 700;">Student Projects</span>
-            <span style="font-weight: 300;">Watch on YouTube</span>
-            </a>
-        </div>
-        <div style="margin-top: 1em; text-align: center;">
-            <iframe 
-                width="100%" 
-                height="400" 
-                src="https://www.youtube.com/embed/videoseries?list=PLS5g1cjzJjFP9MB-l7GLXX_axA5SOIIWe" 
-                title="UQMM Playlist"
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen 
-                style="border-radius: 12px; max-width: 720px;">
-            </iframe>
-             [Winter Research 2025] Loco-Manipulation for Quadruped Robot (Steph Li)
-        </div>
-        </div>
+  <div style="border-left: 4px solid #FFFFFF; border-radius: 12px; padding: 16px; background: white; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); font-size: 14px; max-width: 100%; margin-bottom: 20px;">
+    <div style="margin-bottom: 12px;">
+      🎥 <a href="https://youtu.be/9Bf8jkcqO7I" target="_blank" rel="noopener" style="text-decoration: none; color: #000; font-weight: 600;">
+        <span style="font-weight: 700;">Student Projects</span>
+        <span style="font-weight: 300;">Watch on YouTube</span>
+      </a>
+    </div>
+    <div style="margin-top: 1em; text-align: center;">
+      <iframe width="100%" height="400" src="https://www.youtube.com/embed/videoseries?list=PLS5g1cjzJjFP9MB-l7GLXX_axA5SOIIWe" title="UQMM Playlist" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 12px; max-width: 720px;"></iframe>
+      [Winter Research 2025] Loco-Manipulation for Quadruped Robot (Steph Li)
+    </div>
+  </div>
 </div>
+{% endcomment %}
 
-<!-- RIGHT COLUMN -->
+<!-- MEMBERS -->
 <div class="lab-right">
     <h2>Lab Members</h2>
     <h3>PhD Students</h3>
@@ -177,7 +186,7 @@ profile:
                     <img src="/assets/img/student_preview/zhizhen.png" alt="Zhizhen"  class="img-gallery" />
                     <div class ="textbox" style="margin-top:10px;"> <b> Zhizhen Zhang </b> </div>
                     <div class="textbox info">PhD (2025.01-Present)</div>
-                    <div class="textbox prev-info">Generalizable Agents in Embodied AI<br>MSc@Tsinghua Uni</div>
+                    <div class="textbox prev-info">Atomic VLA<br>MSc@Tsinghua Uni</div>
                     </a>
             </div>
             <div class="box"><a href="https://scholar.google.com/citations?user=Jf8vi_sAAAAJ&hl=en" title="Xiangyu Sun">
@@ -230,12 +239,12 @@ profile:
         <li><strong>Junjie Meng, Ziniu Zhang</strong> – <em>Test-time Domain Adaptation for 3D Object Detection</em>, Aug '23 – Nov '23</li>
         <li><strong>Yuxia Fu, Zhuo Cao</strong> – <em>Dataset Distillation for Object Detection</em>, Feb '23 – Nov '23</li>
         </ul>
-    <h2 style="margin-top: 40px;">Lab Notes</h2>
+    <!-- <h2 style="margin-top: 40px;">Lab Notes</h2>
     <ul>
         <li>🥐 <strong><a href="https://uqmm.gitbook.io/iccv23-notes/">ICCV 2023</a></strong> (Yadan) – tutorials, generalization & 3D vision</li>
         <li>🏰 <strong><a href="https://uqmm.gitbook.io/uqmm-iclr24-notes/">ICLR 2024</a></strong> (Yadan) – generalization & adaptation</li>
         <li>📝 <strong><a href="https://shorturl.at/iMMsH">CVPR 2025</a></strong> (Yadan) – 3D vision, autonomous driving, embodied AI</li>
-    </ul>
+    </ul> -->
     <!-- <h2 style="margin-top:40px">Lab News</h2>
     <details class="news-year" open>
         <summary>2025</summary>
@@ -308,3 +317,11 @@ profile:
     </details> -->
 </div>
 </div>
+
+<section class="lab-showcase">
+  <h2>Lab Awards</h2>
+  {% include awards_gallery.html items=site.data.group_awards_gallery dir="group_awards" label="UQMM lab awards" %}
+
+  <h2>Moments</h2>
+  {% include travel_coverflow.html %}
+</section>

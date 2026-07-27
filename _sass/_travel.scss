@@ -1,0 +1,202 @@
+// 3D coverflow travel gallery — Apple frosted glass (photos only, no stage card)
+.travel-coverflow {
+  --travel-glass-strong: rgba(255, 255, 255, 0.72);
+  --travel-border: rgba(255, 255, 255, 0.55);
+  --travel-veil: rgba(0, 0, 0, 0.5);
+  margin: 0.35rem 0 2.25rem;
+  user-select: none;
+}
+
+html[data-theme="dark"] .travel-coverflow {
+  --travel-glass-strong: rgba(58, 58, 60, 0.78);
+  --travel-border: rgba(255, 255, 255, 0.12);
+  --travel-veil: rgba(0, 0, 0, 0.58);
+}
+
+.travel-coverflow__stage {
+  position: relative;
+  height: clamp(340px, 52vw, 520px);
+  perspective: 1400px;
+  perspective-origin: 50% 48%;
+  overflow: hidden;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.travel-coverflow__track {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+}
+
+.travel-coverflow__card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(72%, 680px);
+  aspect-ratio: 16 / 10;
+  margin: 0;
+  transform-style: preserve-3d;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: rgba(0, 0, 0, 0.06);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.2);
+  transition:
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform, opacity, filter;
+}
+
+.travel-coverflow__img {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+}
+
+.travel-coverflow__veil {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 1.15rem 1.2rem 1.2rem;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, var(--travel-veil) 100%);
+  backdrop-filter: blur(8px) saturate(140%);
+  -webkit-backdrop-filter: blur(8px) saturate(140%);
+  opacity: 0;
+  transform: translateY(8px);
+  transition:
+    opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.travel-coverflow__card.is-active .travel-coverflow__veil {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.travel-coverflow__year {
+  display: inline-block;
+  margin-bottom: 0.3rem;
+  padding: 0.16rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.92) !important;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.travel-coverflow__title,
+.travel-coverflow__caption {
+  margin: 0;
+  color: #fff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.28);
+}
+
+.travel-coverflow__title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.travel-coverflow__caption {
+  margin-top: 0.25rem;
+  font-size: 0.84rem;
+  color: rgba(255, 255, 255, 0.82) !important;
+}
+
+.travel-coverflow__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 0.7rem;
+}
+
+.travel-coverflow__btn {
+  appearance: none;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 999px;
+  border: 1px solid var(--travel-border);
+  background: var(--travel-glass-strong);
+  backdrop-filter: saturate(180%) blur(16px);
+  -webkit-backdrop-filter: saturate(180%) blur(16px);
+  color: var(--global-text-color);
+  font-size: 1.35rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 6px 18px rgba(0, 0, 0, 0.06);
+  transition:
+    transform 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.travel-coverflow__btn:hover,
+.travel-coverflow__btn:focus-visible {
+  transform: translateY(-1px);
+  outline: none;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.travel-coverflow__dots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
+  max-width: min(70vw, 360px);
+}
+
+.travel-coverflow__dot {
+  appearance: none;
+  width: 0.48rem;
+  height: 0.48rem;
+  padding: 0;
+  border: none;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+  transition:
+    width 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    background 0.3s ease;
+}
+
+html[data-theme="dark"] .travel-coverflow__dot {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.travel-coverflow__dot.is-active {
+  width: 1.35rem;
+  background: var(--global-theme-color);
+}
+
+@media (max-width: 700px) {
+  .travel-coverflow__stage {
+    height: 300px;
+  }
+
+  .travel-coverflow__card {
+    width: min(88%, 420px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .travel-coverflow__card,
+  .travel-coverflow__veil,
+  .travel-coverflow__btn,
+  .travel-coverflow__dot {
+    transition: none;
+  }
+}
