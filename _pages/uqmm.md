@@ -161,13 +161,6 @@ profile:
     <h2>Lab Members</h2>
     <h3>PhD Students</h3>
         <div class="image-gallery">
-            <div class="box"><a href="https://www.linkedin.com/in/jason-lim-a10a7a189/?originalSubdomain=au" title="Jia Syuen Lim">
-                    <img src="/assets/img/student_preview/jason.jpeg" alt="Jia"  class="img-gallery" />
-                    <div class ="textbox" style="margin-top:10px;"> <b> Jia Syuen Lim </b> </div>
-                    <div class="textbox info">PhD (2023.07-Present)</div>
-                    <div class="textbox prev-info">Open-world detection and VLA<br>BSc@UQ</div>
-                    </a>
-            </div>
             <div class="box"><a href="" title="Yuxia Fu">
                     <img src="/assets/img/student_preview/yuxia.jpg" alt="Yuxia"  class="img-gallery" />
                     <div class ="textbox" style="margin-top:10px;"> <b> Yuxia Fu </b> </div>
@@ -226,8 +219,16 @@ profile:
             <a href="https://www.linkedin.com/in/djamahl-etchegaray-888873140/?originalSubdomain=au" title="Djamahl Etchegaray">
                 <img src="/assets/img/student_preview/djamahl.png" alt="Djamahl" class="img-gallery" />
                 <div class="textbox name"><b>Djamahl Etchegaray</b></div>
-                <div class="textbox info">-> Research Scientist @ Atlassian</div>
+                <div class="textbox info">-> ML Engineer @ Atlassian</div>
                 <div class="textbox prev-info">PhD@UQMM, 2023.01-2026.08</div>
+            </a>
+        </div>
+        <div class="box">
+            <a href="https://www.linkedin.com/in/jason-lim-a10a7a189/?originalSubdomain=au" title="Jia Syuen Lim">
+                <img src="/assets/img/student_preview/jason.jpeg" alt="Jia" class="img-gallery" />
+                <div class="textbox name"><b>Jia Syuen Lim</b></div>
+                <div class="textbox info">-> Applied Scientist @ futuresecure.ai</div>
+                <div class="textbox prev-info">Open-world detection and VLA<br>BSc@UQ</div>
             </a>
         </div>
     </div>

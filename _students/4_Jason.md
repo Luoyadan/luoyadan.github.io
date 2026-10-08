@@ -1,10 +1,10 @@
 ---
 layout: page
 title: Jia Syuen<br /> Lim
-description: PhD Student, 2023.07-Present
+description: Applied Scientist @ futuresecure.ai
 img: assets/img/student_preview/jason-headshot.jpg
 importance: 4
-category: current
+category: alumni
 url: https://www.linkedin.com/in/jason-lim-a10a7a189/?originalSubdomain=au
 redirect: https://www.linkedin.com/in/jason-lim-a10a7a189/?originalSubdomain=au
 

@@ -6,7 +6,7 @@ description:
 nav: true
 nav_order: 5
 ---
-**2026, S1** - Course Coordinator:  [INFS4205/INFS7205: Advanced Techniques for High Dimensional Data](https://my.uq.edu.au/programs-courses/course.html?course_code=INFS7205)
+**2026, S1** - Course Coordinator:  [INFS4205/INFS7205: Advanced Techniques for High Dimensional Data](https://my.uq.edu.au/programs-courses/course.html?course_code=INFS7205) · [Course Hub](https://infs4205-7205.github.io/CourseHub/)
 
 **2025, S1** - Course Coordinator:  [INFS4205/INFS7205: Advanced Techniques for High Dimensional Data](https://my.uq.edu.au/programs-courses/course.html?course_code=INFS7205)
 
@@ -43,4 +43,3 @@ Discover a curated collection of student projects, including:
 
 **2018** - Tutor: [INFS 7410: Information Retrieval and Web Search](https://my.uq.edu.au/programs-courses/course.html?course_code=INFS7410) 
 <!-- [SeCAT: 4.64/5.0] -->
-
