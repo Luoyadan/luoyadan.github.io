@@ -13,17 +13,17 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      BUNDLE_FROZEN: 'true'
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
     - name: Setup Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: '3.0.2'
+        ruby-version: '3.4.12'
+        bundler: '2.6.9'
         bundler-cache: true
-    - name: Install deps
-      run: |
-        npm install -g mermaid.cli
     - name: Setup deploy options
       id: setup
       run: |
@@ -36,7 +36,14 @@ jobs:
           echo "SRC_BRANCH=${GITHUB_REF#refs/heads/}" >> $GITHUB_OUTPUT
         fi
         echo "DEPLOY_BRANCH=gh-pages" >> $GITHUB_OUTPUT
-    - name: Deploy website 
-      run:  yes | bash bin/deploy --verbose ${{ steps.setup.outputs.NO_PUSH }}
-                    --src ${{ steps.setup.outputs.SRC_BRANCH }} 
-                    --deploy ${{ steps.setup.outputs.DEPLOY_BRANCH }} 
+    - name: Deploy website
+      env:
+        SRC_BRANCH: ${{ steps.setup.outputs.SRC_BRANCH }}
+        DEPLOY_BRANCH: ${{ steps.setup.outputs.DEPLOY_BRANCH }}
+        NO_PUSH: ${{ steps.setup.outputs.NO_PUSH }}
+      run: |
+        options=(--src "$SRC_BRANCH" --deploy "$DEPLOY_BRANCH")
+        if [[ "$NO_PUSH" == '--no-push' ]]; then
+          options+=(--no-push)
+        fi
+        bash bin/deploy "${options[@]}" <<< 'y'

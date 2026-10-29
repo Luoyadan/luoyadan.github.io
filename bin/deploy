@@ -9,7 +9,7 @@ DEPLOY_BRANCH="gh-pages"
 
 USAGE_MSG="usage: deploy [-h|--help] [-u|--user] [-s|--src SRC_BRANCH] [-d|--deploy DEPLOY_BRANCH] [--verbose] [--no-push]"
 
-while [[ $# > 0 ]]; do
+while [[ $# -gt 0 ]]; do
     key="$1"
 
     case $key in
@@ -20,10 +20,12 @@ while [[ $# > 0 ]]; do
         -u|--user)
         ;;
         -s|--src)
+        [[ $# -ge 2 && -n "$2" ]] || { echo 'Missing source branch' >&2; exit 1; }
         SRC_BRANCH="$2"
         shift
         ;;
         -d|--deploy)
+        [[ $# -ge 2 && -n "$2" ]] || { echo 'Missing deploy branch' >&2; exit 1; }
         DEPLOY_BRANCH="$2"
         shift
         ;;
@@ -44,6 +46,14 @@ done
 
 # Exit if any subcommand fails
 set -e
+
+# Check ref names as literal data before any checkout or deletion.
+git check-ref-format --branch "$SRC_BRANCH" >/dev/null
+git check-ref-format --branch "$DEPLOY_BRANCH" >/dev/null
+if [[ "$SRC_BRANCH" == "$DEPLOY_BRANCH" ]]; then
+    echo 'Source and deploy branches must be different.' >&2
+    exit 1
+fi
 
 echo "Deploying..."
 echo "Source branch: $SRC_BRANCH"
@@ -75,25 +85,25 @@ if ! test -z "$(git ls-files --exclude-standard --others)"; then
 fi
 
 # Switch to source branch (creates it if necessary from the current branch)
-if [ `git branch | grep $SRC_BRANCH | tr ' ' '\n' | tail -1` ]
+if git show-ref --verify --quiet "refs/heads/$SRC_BRANCH"
 then
-    git checkout $SRC_BRANCH
+    git checkout "$SRC_BRANCH"
 else
-    git checkout -b $SRC_BRANCH
+    git checkout -b "$SRC_BRANCH"
 fi
 
 # Checkout DEPLOY_BRANCH branch
-if [ `git branch | grep $DEPLOY_BRANCH` ]
+if git show-ref --verify --quiet "refs/heads/$DEPLOY_BRANCH"
 then
-  git branch -D $DEPLOY_BRANCH
+  git branch -D "$DEPLOY_BRANCH"
 fi
-git checkout -b $DEPLOY_BRANCH
+git checkout -b "$DEPLOY_BRANCH"
 
 # Export JEKYLL_ENV=production
 export JEKYLL_ENV=production
 
 # Build site
-bundle exec jekyll build
+BUNDLE_FROZEN=true bundle exec jekyll build
 
 # Drop oversized assets that exceed GitHub's 100MB limit (Jekyll copies
 # gitignored files into _site if they exist on disk).
@@ -110,10 +120,10 @@ touch .nojekyll
 # Push to DEPLOY_BRANCH
 git add -fA
 git commit --allow-empty -m "$(git log -1 --pretty=%B) [ci skip]"
-[[ ${NO_PUSH} ]] || git push -f -q origin $DEPLOY_BRANCH
+[[ ${NO_PUSH} ]] || git push -f -q origin "$DEPLOY_BRANCH"
 
 # Move back to SRC_BRANCH
-git checkout $SRC_BRANCH
+git checkout "$SRC_BRANCH"
 
 echo "Deployed successfully!"
 

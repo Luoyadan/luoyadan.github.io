@@ -200,16 +200,16 @@ nav_order: 3
     .then(forkedRepos => {
       // 如果出错或空数据
       if (forkedRepos.message) {
-        repoList.innerHTML = `<p>Error: ${forkedRepos.message}</p>`;
+        showRepoMessage(`Error: ${forkedRepos.message}`);
         return;
       }
       if (forkedRepos.length === 0) {
-        repoList.innerHTML = '<p>forked repos not found</p>';
+        showRepoMessage('forked repos not found');
         return;
       }
 
       // 清空“加载中”
-      repoList.innerHTML = '';
+      repoList.replaceChildren();
 
       // 2. 遍历每一个 fork 仓库，再请求一次详细信息
       forkedRepos.forEach(repo => {
@@ -233,10 +233,37 @@ nav_order: 3
     })
     .catch(error => {
       console.error('Error:', error);
-      repoList.innerHTML = `<p>Error fetching data: ${error}</p>`;
+      showRepoMessage(`Error fetching data: ${error}`);
     });
 
-  // 3. 用一个函数来生成卡片（示例简化版）
+  // Treat API values as text, never as HTML.
+  function repoElement(tag, className, text) {
+    const element = document.createElement(tag);
+    if (className) element.className = className;
+    if (text !== undefined) element.textContent = String(text);
+    return element;
+  }
+
+  function showRepoMessage(message) {
+    repoList.replaceChildren(repoElement('p', '', message));
+  }
+
+  function repoLink(url, label) {
+    const link = repoElement('a', '', label);
+    try {
+      const parsed = new URL(url);
+      if (parsed.origin === 'https://github.com' && !parsed.username && !parsed.password) {
+        link.href = parsed.href;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+      }
+    } catch (_) {
+      // Invalid URLs remain plain labels without a clickable destination.
+    }
+    return link;
+  }
+
+  // 3. Build cards with DOM nodes so descriptions cannot inject markup.
   function createRepoCard(repoData) {
     // 如果是 fork 并且有 parent，则用 parent 的数据
     const isForkWithParent = repoData.fork && repoData.parent;
@@ -246,33 +273,23 @@ nav_order: 3
     const forks = isForkWithParent
       ? repoData.parent.forks_count
       : repoData.forks_count;
-    const parentLink = isForkWithParent
-      ? `<div class="original-stats">
-           Forked from: 
-           <a href="${repoData.parent.html_url}" target="_blank">
-             ${repoData.parent.full_name}
-           </a>
-         </div>`
-      : '';
-
-    // 生成卡片 HTML
-    const card = document.createElement('div');
-    card.classList.add('card');
-    card.innerHTML = `
-      <div class="card-header">
-        <a href="${repoData.html_url}" target="_blank">
-          ${repoData.name}
-        </a>
-      </div>
-      <div class="card-body">
-        <p class="card-text">${repoData.description || 'no description'}</p>
-        <div class="stats">
-          <span class="badge badge-primary">Stars: ${stars}</span>
-          <span class="badge badge-secondary">Forks: ${forks}</span>
-        </div>
-        ${parentLink}
-      </div>
-    `;
+    const card = repoElement('div', 'card');
+    const header = repoElement('div', 'card-header');
+    header.appendChild(repoLink(repoData.html_url, repoData.name));
+    const body = repoElement('div', 'card-body');
+    body.appendChild(repoElement('p', 'card-text', repoData.description || 'no description'));
+    const stats = repoElement('div', 'stats');
+    stats.appendChild(repoElement('span', 'badge badge-primary', `Stars: ${stars}`));
+    stats.appendChild(document.createTextNode(' '));
+    stats.appendChild(repoElement('span', 'badge badge-secondary', `Forks: ${forks}`));
+    body.appendChild(stats);
+    if (isForkWithParent) {
+      const parent = repoElement('div', 'original-stats', 'Forked from: ');
+      parent.appendChild(repoLink(repoData.parent.html_url, repoData.parent.full_name));
+      body.appendChild(parent);
+    }
+    card.appendChild(header);
+    card.appendChild(body);
     repoList.appendChild(card);
   }
 </script>

@@ -178,13 +178,13 @@ $ git clone git@github.com:<your-username>/<your-repo-name>.git
 $ cd <your-repo-name>
 ```
 
-Finally, run the following command that will pull a pre-built image from DockerHub and will run your website.
+Build the local image from the pinned Ruby base and committed `Gemfile.lock`, then start the website:
 
 ```bash
-$ docker-compose up
+$ docker compose up --build
 ```
 
-Note that when you run it for the first time, it will download a docker image of size 300MB or so.
+The first build downloads the Ruby base image and installs the locked dependencies. No third-party al-folio image is used.
 
 Now, feel free to customize the theme however you like (don't forget to change the name!). After you are done, you can use the same command (`docker-compose up`) to render the webpage with all you changes. Also, make sure to commit your final changes.
 
@@ -207,7 +207,7 @@ $ docker-compose -f docker-local.yml up
 
 > To change port number, you can edit `docker-compose.yml` file.
 
-> If you want to update jekyll, install new ruby packages, etc., all you have to do is build the image again! It will download ruby and jekyll and install all ruby packages again from scratch.
+> Rebuild after changing `Gemfile` and `Gemfile.lock`. Docker fails if those files disagree; it never deletes or regenerates the lockfile.
 
 </details>
 
@@ -220,12 +220,18 @@ Assuming you have [Ruby](https://www.ruby-lang.org/en/downloads/) and [Bundler](
 ```bash
 $ git clone git@github.com:<your-username>/<your-repo-name>.git
 $ cd <your-repo-name>
-$ bundle install
+$ rbenv install -s 3.4.12
+$ gem install bundler -v 2.6.9
+$ BUNDLE_FROZEN=true bundle install
 $ bundle exec jekyll serve
 ```
 
 Now, feel free to customize the theme however you like (don't forget to change the name!).
 After you are done, **commit** your final changes.
+
+Use Ruby 3.4.12 (`.ruby-version`) and Bundler 2.6.9 for local builds and CI. Commit `Gemfile.lock`, including transitive dependencies; do not delete it to fix installation errors. To intentionally upgrade a dependency, edit its exact version in `Gemfile`, run `bundle update <gem-name>`, review the lockfile diff, and verify `BUNDLE_FROZEN=true bundle exec jekyll build`. The Docker base image is pinned by digest and should be updated deliberately alongside Ruby.
+
+Security regression checks: `node --test tests/security.test.cjs`. The browser test uses Chromium (`CHROME_BIN` can override its executable path); it must be installed to run the complete check.
 
 ---
 
